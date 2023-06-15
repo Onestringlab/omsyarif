@@ -4,8 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Months;
 use App\Models\Salaries;
+use App\Imports\SalaryArray;
+use App\Imports\SalaryModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
 
 class SalariesController extends Controller
 {
@@ -133,5 +138,11 @@ class SalariesController extends Controller
   {
     $row = Salaries::where("id", $id)->first();
     return view('salaries/slip', ['row' => $row]);
+  }
+
+  public function importsalaries($month_id)
+  {
+    Excel::import(new SalaryModel($month_id), 'xlsfiles/dibayarkan.xls');
+    return redirect('/salaries/data/' . $month_id)->with('success', 'All good!');
   }
 }

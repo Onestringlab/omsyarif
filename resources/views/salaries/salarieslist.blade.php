@@ -16,10 +16,10 @@ Data Salaries 
             <tr class="align-middle">
               <th>No</th>
               <th>NIP</th>
-              <th>Name</th>
+              <th>Nama</th>
               <th>Gol</th>
               <th>Rekening</th>
-              <th>Bank</th>
+              <!-- <th>Bank</th> -->
               <th>Bersih</th>
               <!-- <th>P1</th>
               <th>P2</th>
@@ -39,7 +39,10 @@ Data Salaries 
               <th>Bayar</th>
               <!-- <th>Created_at</th>
               <th>Updated_at</th> -->
-              <th class="text-center"><a class="btn btn-primary" href="{{asset('/')}}salaries/create/{{ $month->id }}"> <i class="fas fa-plus"></i></a></th>
+              <th class="text-center">
+                <a class="btn btn-primary" href="{{asset('/')}}salaries/create/{{ $month->id }}"> <i class="fas fa-plus"></i></a>
+                <a class="btn btn-secondary" href="{{asset('/')}}salaries/import/{{ $month->id }}"> <i class="fa-sharp fa-solid fa-upload"></i></a>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -51,7 +54,7 @@ Data Salaries 
               <td>{{ $row['name'] }}</td>
               <td>{{ $row['gol'] }}</td>
               <td>{{ $row['rekening'] }}</td>
-              <td>{{ $row['bank'] }}</td>
+              <!-- <td>{{ $row['bank'] }}</td> -->
               <td>{{ $row['bersih'] }}</td>
               <!-- <td>{{ $row['p1'] }}</td>
               <td>{{ $row['p2'] }}</td>

@@ -5,12 +5,12 @@ Data Salaries 
 @endsection
 
 @section('content')
+<script>
+  function button_cancel() {
+    location.replace("{{ asset('/') }}salaries/data/{{ $month_id }}");
+  }
+</script>
 <div class="container">
-  <script>
-    function button_cancel() {
-      location.replace("{{ asset('/') }}salaries/data/{{ $month_id }}");
-    }
-  </script>
   <div class="card border-success">
     <h5 class="card-header text-bg-success"> Data Slip Gaji</h5>
     <div class="card-body">
@@ -35,7 +35,7 @@ Data Salaries 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <label for="name" class="col-sm-2 col-form-label">Nama</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="name" value="">
           </div>

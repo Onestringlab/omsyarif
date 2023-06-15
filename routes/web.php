@@ -56,7 +56,10 @@ Route::middleware(['auth', 'checkrole:admin'])->group(
 			Route::get('{month_id}/{id}/edit', 'edit');
 			Route::get('{month_id}/{id}/delete', 'delete');
 			Route::get('data/{month_id}', 'data');
+			Route::get('import/{month_id}', 'importsalaries');
 		});
+
+		// Route::get('importsalaries', [SalariesController::class, 'importsalaries']);
 
 		Route::resource('allowances', AllowancesController::class);
 		Route::controller(AllowancesController::class)->prefix('allowances')->group(function () {
