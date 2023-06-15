@@ -56,7 +56,8 @@ Route::middleware(['auth', 'checkrole:admin'])->group(
 			Route::get('{month_id}/{id}/edit', 'edit');
 			Route::get('{month_id}/{id}/delete', 'delete');
 			Route::get('data/{month_id}', 'data');
-			Route::get('import/{month_id}', 'importsalaries');
+			Route::post('import', 'import');
+			Route::get('remove/{month_id}', 'remove');
 		});
 
 		// Route::get('importsalaries', [SalariesController::class, 'importsalaries']);

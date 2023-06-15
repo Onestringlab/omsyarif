@@ -140,9 +140,20 @@ class SalariesController extends Controller
     return view('salaries/slip', ['row' => $row]);
   }
 
-  public function importsalaries($month_id)
+  public function import(Request $request)
   {
-    Excel::import(new SalaryModel($month_id), 'xlsfiles/dibayarkan.xls');
-    return redirect('/salaries/data/' . $month_id)->with('success', 'All good!');
+    $this->validate($request, [
+      'file' => 'required|mimes:xls,xlsx',
+    ]);
+
+    $file = $request->file('file');
+    Excel::import(new SalaryModel($request->month_id), $file);
+    return redirect('/salaries/data/' . $request->month_id);
+  }
+
+  public function remove($month_id)
+  {
+    Salaries::where('month_id', '=', $month_id)->delete();
+    return redirect('/salaries/data/' . $month_id);
   }
 }

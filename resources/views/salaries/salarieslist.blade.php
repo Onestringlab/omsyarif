@@ -11,9 +11,9 @@ Data Salaries 
     <div class="card-body">
       <h5 class="card-title">{{$month->month}} {{$month->year}}</h5>
       <div class="table-responsive">
-        <table class="table table-striped table-hover ">
-          <thead class="thead-dark">
-            <tr class="align-middle">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr class="align-middle table-primary">
               <th>No</th>
               <th>NIP</th>
               <th>Nama</th>
@@ -40,8 +40,12 @@ Data Salaries 
               <!-- <th>Created_at</th>
               <th>Updated_at</th> -->
               <th class="text-center">
-                <a class="btn btn-primary" href="{{asset('/')}}salaries/create/{{ $month->id }}"> <i class="fas fa-plus"></i></a>
-                <a class="btn btn-secondary" href="{{asset('/')}}salaries/import/{{ $month->id }}"> <i class="fa-sharp fa-solid fa-upload"></i></a>
+                <a class="btn btn-primary" href="{{asset('/')}}salaries/create/{{ $month->id }}">
+                  <i class="fas fa-plus"></i></a>
+                <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#uploadSalaries">
+                  <i class="fa-sharp fa-solid fa-upload"></i></a>
+                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#removeSalaries">
+                  <i class="fas fa-trash"></i></a>
               </th>
             </tr>
           </thead>
@@ -84,6 +88,61 @@ Data Salaries 
           </tbody>
         </table>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="uploadSalaries" tabindex="-1" aria-labelledby="uploadSalariesLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="uploadSalariesLabel">Mengunggah File</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" action="{{ asset('/salaries/import') }}" method="post" enctype="multipart/form-data">
+          {{ csrf_field() }}
+          <div class="mb-3 row">
+            <label for="point" class="col-sm-2 col-form-label">File</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="file" name="file" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="hidden" name="month_id" value="{{ $month->id }}">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button type="Submit" class="btn btn-primary">Unggah</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="removeSalaries" tabindex="-1" aria-labelledby="removeSalariesLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="removeSalariesLabel">Menghapus Data</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 row">
+          <div class="col-sm-10">
+            PERINGATAN!!!<br>
+            SEMUA data pada bulan ini akan DIHAPUS!!!
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input type="hidden" name="month_id" value="{{ $month->id }}">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          <a class="btn btn-danger" href="{{asset('/')}}salaries/remove/{{ $month->id }}">Hapus</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
