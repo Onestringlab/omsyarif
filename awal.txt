@@ -1,0 +1,97 @@
+composer create-project --prefer-dist laravel/laravel nekosaya
+cd folder
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+php artisan config:cache
+php artisan cache:clear
+php artisan serve
+
+php artisan make:controller UserController --resource
+php artisan migrate
+
+php artisan make:controller NekoController --resource
+php artisan make:model Neko -msf
+php artisan make:migration create_tb_neko_table
+php artisan migrate
+php artisan db:seed
+
+php artisan make:controller AlbumController --resource
+php artisan make:model Album
+php artisan make:migration create_album_table
+php artisan migrate
+
+
+"files" : ["app/Helper/utilHelper.php"]
+composer dump-autoload
+
+composer require livewire/livewire
+php artisan make:livewire Homelive
+php artisan make:livewire Gallerieslive
+php artisan make:livewire Albumlive
+
+------------------------------------------------------------------------------
+
+
+
+npm install --save turbolinks
+
+
+$image = Image::make(storage_path('app/public/profile.jpg'))->resize(300, 200);
+
+composer require barryvdh/laravel-dompdf
+composer require predis/predis
+composer require anhskohbo/no-captcha
+composer require laravel/socialite
+composer require livewire/livewire
+composer require barryvdh/laravel-debugbar --dev
+
+
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+REDIS_CLIENT=predis
+REDIS_CACHE_DB=0
+
+use Illuminate\Support\Facades\Redis;
+Route::get('/', function () {
+    $p = Redis::incr('p');
+    return $p;
+});
+
+
+Route::get("users_with_cache", "TestController@index");
+Route::get("users_with_query", "TestController@getUser");
+
+php artisan make:controller UserController
+
+php artisan make:controller UserController --resource
+
+di redis-cli
+config set stop-writes-on-bgsave-error no
+
+https://www.highcharts.com/docs/index
+
+
+https://www.cloudways.com/blog/best-laravel-packages/
+
+
+
+
+php artisan ui bootstrap
+
+php artisan ui bootstrap --auth
+
+
+php artisan make:livewire Home
+php artisan make:livewire ProductIndex
+php artisan make:livewire CartIndex
+
+php artisan make:model Product -msf
+php artisan migrate
+php artisan db:seed
+
+php artisan make:migration create_tb_neko_table
+php artisan make:migration create_tb_album_table
