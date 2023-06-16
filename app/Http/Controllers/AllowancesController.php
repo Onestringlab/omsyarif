@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\AllowanceModel;
 use App\Models\Months;
 use App\Models\Allowances;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AllowancesController extends Controller
 {
@@ -54,6 +57,8 @@ class AllowancesController extends Controller
     $allowances->potkelbtj = $request->potkelbtj;
     $allowances->potlain = $request->potlain;
     $allowances->pottabrum = $request->pottabrum;
+    $allowances->bpjs = $request->bpjs;
+    $allowances->bpjs2 = $request->bpjs2;
     $allowances->totpot = $request->totpot;
     $allowances->bersih = $request->bersih;
     // $allowances->created_at = $request->created_at;
@@ -107,6 +112,8 @@ class AllowancesController extends Controller
     $allowances->potkelbtj = $request->potkelbtj;
     $allowances->potlain = $request->potlain;
     $allowances->pottabrum = $request->pottabrum;
+    $allowances->bpjs = $request->bpjs;
+    $allowances->bpjs2 = $request->bpjs2;
     $allowances->totpot = $request->totpot;
     $allowances->bersih = $request->bersih;
     // $allowances->created_at = $request->created_at;
@@ -146,5 +153,30 @@ class AllowancesController extends Controller
   {
     $row = Allowances::where("id", $id)->first();
     return view('Allowances/tunjangan', ['row' => $row]);
+  }
+
+  public function import(Request $request)
+  {
+    $this->validate($request, [
+      'file' => 'required|mimes:xls,xlsx',
+    ]);
+
+    $file = $request->file('file');
+    Excel::import(new AllowanceModel($request->month_id), $file);
+    return redirect('/allowances/data/' . $request->month_id);
+  }
+
+  public function remove($month_id)
+  {
+    Allowances::where('month_id', '=', $month_id)->delete();
+    return redirect('/allowances/data/' . $month_id);
+  }
+
+  public function tunjanganpdf($id)
+  {
+    $row = Allowances::where('id', $id)->first();
+    $pdf = PDF::loadview('allowances/tunjanganpdf', ['row' => $row])->setPaper('a5');
+    // return $pdf->download('slip' + $id + '.pdf');
+    return $pdf->stream();
   }
 }

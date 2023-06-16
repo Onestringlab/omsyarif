@@ -189,6 +189,18 @@ Slip Gaji Dibayarkan
         </div>
       </div>
       <div class="mb-3 row">
+        <label for="bpjs" class="col-sm-2 control-label">BPJS</label>
+        <div class="col-sm-10">
+          {{ $row->bpjs }}
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="bpjs2" class="col-sm-2 control-label">BPJS2</label>
+        <div class="col-sm-10">
+          {{ $row->bpjs2 }}
+        </div>
+      </div>
+      <div class="mb-3 row">
         <label for="totpot" class="col-sm-2 control-label">Totpot</label>
         <div class="col-sm-10">
           {{ $row->totpot }}

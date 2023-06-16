@@ -47,7 +47,7 @@ class SalaryModel implements ToModel, WithHeadingRow
       'p14' =>  $row['p14'],
       'p15' =>  $row['p15'],
       'point' => $row['potinternal'],
-      'bayar' => $row['bayar'],
+      'bayar' => $row['bayar']
     ]);
   }
 }

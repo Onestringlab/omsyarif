@@ -20,6 +20,7 @@ Slip Gaji Dibayarkan
               <th width="60">No</th>
               <th>Bulan</th>
               <th>Bersih</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -27,8 +28,16 @@ Slip Gaji Dibayarkan
             @foreach ($rows as $row)
             <tr>
               <td>{{ $no++ }}.</td>
-              <td><a href="{{asset('/')}}tunjangan/{{ $row->id }}">{{ $row->months->month }} {{ $row->months->year }} </a></td>
+              <td>{{ $row->months->month }} {{ $row->months->year }}</td>
               <td>{{ $row['bersih'] }}</td>
+              <td>
+                <a class="btn btn-primary" href="{{asset('/')}}tunjangan/{{ $row->id }}">
+                  <i class="fas fa-receipt"></i>
+                </a>
+                <a class="btn btn-danger" href="{{asset('/')}}tunjanganpdf/{{ $row->id }}" target="_blank">
+                  <i class="fa-regular fa-file-pdf"></i>
+                </a>
+              </td>
             </tr>
             @endforeach
           </tbody>

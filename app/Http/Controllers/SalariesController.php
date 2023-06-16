@@ -7,6 +7,7 @@ use App\Models\Salaries;
 use App\Imports\SalaryArray;
 use App\Imports\SalaryModel;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
@@ -130,14 +131,22 @@ class SalariesController extends Controller
   public function sliplist()
   {
     $nip = Auth::user()->nip;
-    $rows = Salaries::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
+    $rows = Salaries::where('nip', $nip)->orderBy('created_at', 'DESC')->get();
     return view('salaries/sliplist', ['rows' => $rows]);
   }
 
   public function slip($id)
   {
-    $row = Salaries::where("id", $id)->first();
+    $row = Salaries::where('id', $id)->first();
     return view('salaries/slip', ['row' => $row]);
+  }
+
+  public function slippdf($id)
+  {
+    $row = Salaries::where('id', $id)->first();
+    $pdf = PDF::loadview('salaries/slippdf', ['row' => $row])->setPaper('a5');
+    // return $pdf->download('slip' + $id + '.pdf');
+    return $pdf->stream();
   }
 
   public function import(Request $request)

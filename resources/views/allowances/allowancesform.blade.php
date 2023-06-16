@@ -197,6 +197,18 @@ Data Allowances 
           </div>
         </div>
         <div class="mb-3 row">
+          <label for="bpjs" class="col-sm-2 col-form-label">BPJS</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="bpjs" value="0">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="bpjs2" class="col-sm-2 col-form-label">BPJS2</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="bpjs2" value="0">
+          </div>
+        </div>
+        <div class="mb-3 row">
           <label for="totpot" class="col-sm-2 col-form-label">Totpot</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="totpot" value="0">
@@ -410,6 +422,18 @@ Data Allowances 
           <label for="pottabrum" class="col-sm-2 col-form-label">Pottabrum</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="pottabrum" value="{{ $row->pottabrum }}">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="bpjs" class="col-sm-2 col-form-label">BPJS</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="bpjs" value="{{ $row->bpjs }}">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="bpjs2" class="col-sm-2 col-form-label">BPJS2</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="bpjs2" value="{{ $row->bpjs2 }}">
           </div>
         </div>
         <div class="mb-3 row">
@@ -631,6 +655,18 @@ Data Allowances 
           </div>
         </div>
         <div class="mb-3 row">
+          <label for="bpjs" class="col-sm-2 control-label">BPJS</label>
+          <div class="col-sm-10">
+            {{ $row->bpjs }}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="bpjs" class="col-sm-2 control-label">BPJS2</label>
+          <div class="col-sm-10">
+            {{ $row->bpjs2 }}
+          </div>
+        </div>
+        <div class="mb-3 row">
           <label for="totpot" class="col-sm-2 control-label">Totpot</label>
           <div class="col-sm-10">
             {{ $row->totpot }}
@@ -844,6 +880,18 @@ Data Allowances 
         <label for="pottabrum" class="col-sm-2 control-label">Pottabrum</label>
         <div class="col-sm-10">
           {{ $row->pottabrum }}
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="bpjs" class="col-sm-2 control-label">BPJS</label>
+        <div class="col-sm-10">
+          {{ $row->bpjs }}
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="bpjs" class="col-sm-2 control-label">BPJS2</label>
+        <div class="col-sm-10">
+          {{ $row->bpjs2 }}
         </div>
       </div>
       <div class="mb-3 row">

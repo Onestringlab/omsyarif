@@ -44,6 +44,8 @@ return new class extends Migration
             $table->integer('pottabrum')->nullable();
             $table->integer('totpot')->nullable();
             $table->integer('bersih')->nullable();
+            $table->integer('bpjs')->nullable();
+            $table->integer('bpjs2')->nullable();
             $table->timestamps();
             $table->foreign('month_id')->references('id')->on('months')->onDelete('cascade');
         });

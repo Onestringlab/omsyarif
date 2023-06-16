@@ -59,7 +59,7 @@ Data Salaries 
               <td>{{ $row['gol'] }}</td>
               <td>{{ $row['rekening'] }}</td>
               <!-- <td>{{ $row['bank'] }}</td> -->
-              <td>{{ $row['bersih'] }}</td>
+              <td>{{ toCurrency($row['bersih']) }}</td>
               <!-- <td>{{ $row['p1'] }}</td>
               <td>{{ $row['p2'] }}</td>
               <td>{{ $row['p3'] }}</td>
@@ -74,8 +74,8 @@ Data Salaries 
               <td>{{ $row['p13'] }}</td>
               <td>{{ $row['p14'] }}</td>
               <td>{{ $row['p15'] }}</td> -->
-              <td>{{ $row['point'] }}</td>
-              <td>{{ $row['bayar'] }}</td>
+              <td>{{ toCurrency($row['point']) }}</td>
+              <td>{{ toCurrency($row['bayar']) }}</td>
               <!-- <td>{{ $row['created_at'] }}</td>
               <td>{{ $row['updated_at'] }}</td> -->
               <td class="text-center">

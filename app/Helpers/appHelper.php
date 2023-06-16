@@ -114,3 +114,9 @@ function add_time($start, $duration)
   $est = date("H:i", strtotime($start . " + " . $duration . " minutes"));
   return $est;
 }
+
+function toCurrency($amount, $currency = '', $fractionDigits = 0)
+{
+  $format = $currency . number_format($amount, $fractionDigits, ',', '.');
+  return $format;
+}

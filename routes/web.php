@@ -30,11 +30,13 @@ Route::middleware(['auth', 'checkrole:user,admin'])->group(
 		Route::controller(SalariesController::class)->group(function () {
 			Route::get('/sliplist', 'sliplist')->name('sliplist');
 			Route::get('/slip/{id}', 'slip')->name('slip');
+			Route::get('/slippdf/{id}', 'slippdf')->name('slippdf');
 		});
 
 		Route::controller(AllowancesController::class)->group(function () {
 			Route::get('/tunjanganlist', 'tunjanganlist')->name('tunjanganlist');
 			Route::get('/tunjangan/{id}', 'tunjangan')->name('tunjangan');
+			Route::get('/tunjanganpdf/{id}', 'tunjanganpdf')->name('tunjanganpdf');
 		});
 	}
 );
@@ -69,6 +71,8 @@ Route::middleware(['auth', 'checkrole:admin'])->group(
 			Route::get('{month_id}/{id}/edit', 'edit');
 			Route::get('{month_id}/{id}/delete', 'delete');
 			Route::get('data/{month_id}', 'data');
+			Route::post('import', 'import');
+			Route::get('remove/{month_id}', 'remove');
 		});
 	}
 );

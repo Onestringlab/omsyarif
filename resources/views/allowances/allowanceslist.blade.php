@@ -19,7 +19,7 @@ Data Allowances 
               <th>Nmpeg</th>
               <!-- <th>Npwp</th> -->
               <th>Rekening</th>
-              <th>Nmbankspan</th>
+              <!-- <th>Nmbankspan</th> -->
               <th>Gjpokok</th>
               <!-- <th>Tjistri</th>
               <th>Tjanak</th>
@@ -41,26 +41,35 @@ Data Allowances 
               <th>Potswrum</th>
               <th>Potkelbtj</th>
               <th>Potlain</th>
-              <th>Pottabrum</th> -->
+              <th>Pottabrum</th> 
+              <th>BPJS</th>
+              <th>BPJS2</th> -->
               <th>Totpot</th>
               <th>Bersih</th>
               <!-- <th>Created_at</th>
               <th>Updated_at</th> -->
-              <th class="text-center"><a class=" btn btn-primary" href="{{asset('/')}}allowances/create/{{ $month->id }}"> <i class="fas fa-plus"></i></a></th>
+              <th class="text-center">
+                <a class=" btn btn-primary" href="{{asset('/')}}allowances/create/{{ $month->id }}">
+                  <i class="fas fa-plus"></i></a>
+                <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#uploadAllowances">
+                  <i class="fa-sharp fa-solid fa-upload"></i></a>
+                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#removeAllowances">
+                  <i class="fas fa-trash"></i></a>
+              </th>
             </tr>
           </thead>
           <tbody>
             @php ($no = 1)
             @foreach ($rows as $row)
             <tr class="align-middle">
-              <td>{{ $no++ }}</td>
+              <td>{{ $no++ }}.</td>
               <!-- <td>{{ $row['month_id'] }}</td> -->
               <td>{{ $row['nip'] }}</td>
               <td>{{ $row['nmpeg'] }}</td>
               <!-- <td>{{ $row['npwp'] }}</td> -->
               <td>{{ $row['rekening'] }}</td>
-              <td>{{ $row['nmbankspan'] }}</td>
-              <td>{{ $row['gjpokok'] }}</td>
+              <!-- <td>{{ $row['nmbankspan'] }}</td> -->
+              <td>{{ toCurrency($row['gjpokok']) }}</td>
               <!-- <td>{{ $row['tjistri'] }}</td>
               <td>{{ $row['tjanak'] }}</td>
               <td>{{ $row['tjupns'] }}</td>
@@ -73,7 +82,7 @@ Data Allowances 
               <td>{{ $row['pembul'] }}</td>
               <td>{{ $row['tjberas'] }}</td>
               <td>{{ $row['tjpph'] }}</td> -->
-              <td>{{ $row['kotor'] }}</td>
+              <td>{{ toCurrency($row['kotor']) }}</td>
               <!-- <td>{{ $row['potpfkbul'] }}</td>
               <td>{{ $row['potpfk2'] }}</td>
               <td>{{ $row['potpfk10'] }}</td>
@@ -81,9 +90,11 @@ Data Allowances 
               <td>{{ $row['potswrum'] }}</td>
               <td>{{ $row['potkelbtj'] }}</td>
               <td>{{ $row['potlain'] }}</td>
-              <td>{{ $row['pottabrum'] }}</td> -->
-              <td>{{ $row['totpot'] }}</td>
-              <td>{{ $row['bersih'] }}</td>
+              <td>{{ $row['pottabrum'] }}</td> 
+              <td>{{ $row['bjps'] }}</td>
+              <td>{{ $row['bpjs2'] }}</td> -->
+              <td>{{ toCurrency($row['totpot']) }}</td>
+              <td>{{ toCurrency($row['bersih']) }}</td>
               <!-- <td>{{ $row['created_at'] }}</td>
               <td>{{ $row['updated_at'] }}</td> -->
               <td class=" text-center">
@@ -96,6 +107,61 @@ Data Allowances 
           </tbody>
         </table>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="uploadAllowances" tabindex="-1" aria-labelledby="uploadAllowancesLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="uploadAllowancesLabel">Mengunggah File</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" action="{{ asset('/allowances/import') }}" method="post" enctype="multipart/form-data">
+          {{ csrf_field() }}
+          <div class="mb-3 row">
+            <label for="point" class="col-sm-2 col-form-label">File</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="file" name="file" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="hidden" name="month_id" value="{{ $month->id }}">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button type="Submit" class="btn btn-primary">Unggah</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="removeAllowances" tabindex="-1" aria-labelledby="removeAllowancesLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="removeSalariesLabel">Menghapus Data</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 row">
+          <div class="col-sm-10">
+            PERINGATAN!!!<br>
+            SEMUA data pada bulan ini akan DIHAPUS!!!
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input type="hidden" name="month_id" value="{{ $month->id }}">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          <a class="btn btn-danger" href="{{asset('/')}}allowances/remove/{{ $month->id }}">Hapus</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
