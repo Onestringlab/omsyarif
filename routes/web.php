@@ -19,7 +19,7 @@ use App\Http\Controllers\AllowancesController;
 |
 */
 
-Auth::routes();
+Auth::routes(['register' => false]);
 Route::middleware(['auth', 'checkrole:user,admin'])->group(
 	function () {
 		Route::get('/', function () {

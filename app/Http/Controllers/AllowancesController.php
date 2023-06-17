@@ -152,7 +152,7 @@ class AllowancesController extends Controller
   public function tunjangan($id)
   {
     $row = Allowances::where("id", $id)->first();
-    return view('Allowances/tunjangan', ['row' => $row]);
+    return view('allowances/tunjangan', ['row' => $row]);
   }
 
   public function import(Request $request)
@@ -176,7 +176,6 @@ class AllowancesController extends Controller
   {
     $row = Allowances::where('id', $id)->first();
     $pdf = PDF::loadview('allowances/tunjanganpdf', ['row' => $row])->setPaper('a5');
-    // return $pdf->download('slip' + $id + '.pdf');
     return $pdf->stream();
   }
 }
