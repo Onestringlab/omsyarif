@@ -25,13 +25,32 @@ Data Months 
         <div class="mb-3 row">
           <label for="month" class="col-sm-2 col-form-label">Month</label>
           <div class="col-sm-10">
-            <input class="form-control" type="text" name="month" value="">
+            @error('month')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <select name="month" class="form-control">
+              <option value="Januari">Januari</option>
+              <option value="Februari">Februari</option>
+              <option value="Maret">Maret</option>
+              <option value="April">April</option>
+              <option value="Mei">Mei</option>
+              <option value="Juni">Juni</option>
+              <option value="Juli">Juli</option>
+              <option value="Agustus">Agustus</option>
+              <option value="September">September</option>
+              <option value="Oktober">Oktober</option>
+              <option value="November">November</option>
+              <option value="Desember">Desember</option>
+            </select>
           </div>
         </div>
         <div class="mb-3 row">
           <label for="year" class="col-sm-2 col-form-label">Year</label>
           <div class="col-sm-10">
-            <input class="form-control" type="text" name="year" value="">
+            @error('year')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <input class="form-control" type="number" name="year" value="">
           </div>
         </div>
         <!-- <div class="mb-3 row">
@@ -49,8 +68,8 @@ Data Months 
         <div class="mb-3">
           <div class="offset-sm-2 col-sm-10">
             <input type="hidden" name="action" value="{{ $action }}">
-            <button type="submit" class="btn btn-primary">Insert</button>
-            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Tambah</button>
+            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
           </div>
         </div>
         {{ csrf_field() }}
@@ -66,7 +85,23 @@ Data Months 
         <div class="mb-3 row">
           <label for="month" class="col-sm-2 col-form-label">Month</label>
           <div class="col-sm-10">
-            <input class="form-control" type="text" name="month" value="{{ $row->month }}">
+            @error('month')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <select name="month" class="form-control">
+              <option value="Januari" {{ $row->month === "Januari" ? "selected" : ""}}>Januari</option>
+              <option value="Februari" {{ $row->month === "Februari" ? "selected" : ""}}>Februari</option>
+              <option value="Maret" {{ $row->month === "Maret" ? "selected" : ""}}>Maret</option>
+              <option value="April" {{ $row->month === "April" ? "selected" : ""}}>April</option>
+              <option value="Mei" {{ $row->month === "Mei" ? "selected" : ""}}>Mei</option>
+              <option value="Juni" {{ $row->month === "Juni" ? "selected" : ""}}>Juni</option>
+              <option value="Juli" {{ $row->month === "Juli" ? "selected" : ""}}>Juli</option>
+              <option value="Agustus" {{ $row->month === "Agustus" ? "selected" : ""}}>Agustus</option>
+              <option value="September" {{ $row->month === "September" ? "selected" : ""}}>September</option>
+              <option value="Oktober" {{ $row->month === "Oktober" ? "selected" : ""}}>Oktober</option>
+              <option value="November" {{ $row->month === "November" ? "selected" : ""}}>November</option>
+              <option value="Desember" {{ $row->month === "Desemeber" ? "selected" : ""}}>Desember</option>
+            </select>
           </div>
         </div>
         <div class="mb-3 row">
@@ -92,20 +127,22 @@ Data Months 
             @method("PATCH")
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="id" value="{{ $row->id }}">
-            <button type="submit" class="btn btn-warning">Update</button>
-            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
+            <button type="submit" class="btn btn-warning">Edit</button>
+            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
           </div>
         </div>
         {{ csrf_field() }}
       </form>
       @elseif($action == 'delete')
       <form class="form-horizontal" action="{{ asset('/') }}months/{{ $row->id }}" method="post">
-        <!-- <div class="mb-3 row">
-          <label for="id" class="col-sm-2 control-label">Id</label>
-          <div class="col-sm-10">
-            {{ $row->id }}
+        <div class="mb-3 row">
+          <div class="col-sm-12">
+            <div class="alert alert-danger">
+              <strong>PERINGATAN!!!</strong>
+              Penghapusan ini akan <strong>MENGHAPUS SEMUA DATA GAJI</strong> pada bulan ini.
+            </div>
           </div>
-        </div> -->
+        </div>
         <div class="mb-3 row">
           <label for="month" class="col-sm-2 control-label">Month</label>
           <div class="col-sm-10">
@@ -135,8 +172,8 @@ Data Months 
             @method("DELETE")
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="id" value="{{ $row->id }}">
-            <button type="submit" class="btn btn-danger">Delete</button>
-            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
+            <button type="submit" class="btn btn-danger">Hapus</button>
+            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
           </div>
         </div>
         {{ csrf_field() }}
@@ -174,7 +211,7 @@ Data Months 
       </div> -->
       <div class="mb-3 row">
         <div class="offset-sm-2 col-sm-10">
-          <button type="button" class="btn btn-secondary" onclick="button_cancel()">Back</button>
+          <button type="button" class="btn btn-secondary" onclick="button_cancel()">Kembali</button>
         </div>
       </div>
       @endif

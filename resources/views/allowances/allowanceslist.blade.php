@@ -12,15 +12,15 @@ Data Allowances 
       <div class="table-responsive">
         <table class="table table-striped table-hover ">
           <thead class="thead-dark">
-            <tr class="align-middle">
+            <tr class="align-middle text-center">
               <th>No</th>
               <!-- <th>Month_id</th> -->
-              <th>Nip</th>
-              <th>Nmpeg</th>
+              <th>NIP</th>
+              <th>Nama</th>
               <!-- <th>Npwp</th> -->
-              <th>Rekening</th>
+              <th width="200">Rekening</th>
               <!-- <th>Nmbankspan</th> -->
-              <th>Gjpokok</th>
+              <th width="100">Pokok</th>
               <!-- <th>Tjistri</th>
               <th>Tjanak</th>
               <th>Tjupns</th>
@@ -33,7 +33,7 @@ Data Allowances 
               <th>Pembul</th>
               <th>Tjberas</th>
               <th>Tjpph</th> -->
-              <th>Kotor</th>
+              <th width="100">Kotor</th>
               <!-- <th>Potpfkbul</th>
               <th>Potpfk2</th>
               <th>Potpfk10</th>
@@ -44,11 +44,11 @@ Data Allowances 
               <th>Pottabrum</th> 
               <th>BPJS</th>
               <th>BPJS2</th> -->
-              <th>Totpot</th>
-              <th>Bersih</th>
+              <th width="100">Potongan</th>
+              <th width="100">Bersih</th>
               <!-- <th>Created_at</th>
               <th>Updated_at</th> -->
-              <th class="text-center">
+              <th class="text-center" width="150">
                 <a class=" btn btn-primary" href="{{asset('/')}}allowances/create/{{ $month->id }}">
                   <i class="fas fa-plus"></i></a>
                 <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#uploadAllowances">
@@ -67,9 +67,9 @@ Data Allowances 
               <td>{{ $row['nip'] }}</td>
               <td>{{ $row['nmpeg'] }}</td>
               <!-- <td>{{ $row['npwp'] }}</td> -->
-              <td>{{ $row['rekening'] }}</td>
+              <td class="text-center">{{ $row['rekening'] }}</td>
               <!-- <td>{{ $row['nmbankspan'] }}</td> -->
-              <td>{{ toCurrency($row['gjpokok']) }}</td>
+              <td class="text-end">{{ toCurrency($row['gjpokok']) }}</td>
               <!-- <td>{{ $row['tjistri'] }}</td>
               <td>{{ $row['tjanak'] }}</td>
               <td>{{ $row['tjupns'] }}</td>
@@ -82,7 +82,7 @@ Data Allowances 
               <td>{{ $row['pembul'] }}</td>
               <td>{{ $row['tjberas'] }}</td>
               <td>{{ $row['tjpph'] }}</td> -->
-              <td>{{ toCurrency($row['kotor']) }}</td>
+              <td class="text-end">{{ toCurrency($row['kotor']) }}</td>
               <!-- <td>{{ $row['potpfkbul'] }}</td>
               <td>{{ $row['potpfk2'] }}</td>
               <td>{{ $row['potpfk10'] }}</td>
@@ -93,8 +93,8 @@ Data Allowances 
               <td>{{ $row['pottabrum'] }}</td> 
               <td>{{ $row['bjps'] }}</td>
               <td>{{ $row['bpjs2'] }}</td> -->
-              <td>{{ toCurrency($row['totpot']) }}</td>
-              <td>{{ toCurrency($row['bersih']) }}</td>
+              <td class="text-end">{{ toCurrency($row['totpot']) }}</td>
+              <td class="text-end">{{ toCurrency($row['bersih']) }}</td>
               <!-- <td>{{ $row['created_at'] }}</td>
               <td>{{ $row['updated_at'] }}</td> -->
               <td class=" text-center">

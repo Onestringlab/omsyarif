@@ -13,14 +13,14 @@ Data Salaries 
       <div class="table-responsive">
         <table class="table table-striped table-hover">
           <thead>
-            <tr class="align-middle table-primary">
+            <tr class="align-middle text-center table-primary">
               <th>No</th>
               <th>NIP</th>
               <th>Nama</th>
               <th>Gol</th>
-              <th>Rekening</th>
+              <th width="200">Rekening</th>
               <!-- <th>Bank</th> -->
-              <th>Bersih</th>
+              <th width="100">Bersih</th>
               <!-- <th>P1</th>
               <th>P2</th>
               <th>P3</th>
@@ -35,11 +35,11 @@ Data Salaries 
               <th>P13</th>
               <th>P14</th>
               <th>P15</th> -->
-              <th>Potongan</th>
-              <th>Bayar</th>
+              <th width="100">Potongan</th>
+              <th width="100">Bayar</th>
               <!-- <th>Created_at</th>
               <th>Updated_at</th> -->
-              <th class="text-center">
+              <th class="text-end" width="150">
                 <a class="btn btn-primary" href="{{asset('/')}}salaries/create/{{ $month->id }}">
                   <i class="fas fa-plus"></i></a>
                 <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#uploadSalaries">
@@ -56,10 +56,10 @@ Data Salaries 
               <td>{{ $no++ }}.</td>
               <td>{{ $row['nip'] }}</td>
               <td>{{ $row['name'] }}</td>
-              <td>{{ $row['gol'] }}</td>
-              <td>{{ $row['rekening'] }}</td>
+              <td class="text-center">{{ $row['gol'] }}</td>
+              <td class="text-center">{{ $row['rekening'] }}</td>
               <!-- <td>{{ $row['bank'] }}</td> -->
-              <td>{{ toCurrency($row['bersih']) }}</td>
+              <td class="text-end">{{ toCurrency($row['bersih']) }}</td>
               <!-- <td>{{ $row['p1'] }}</td>
               <td>{{ $row['p2'] }}</td>
               <td>{{ $row['p3'] }}</td>
@@ -74,11 +74,11 @@ Data Salaries 
               <td>{{ $row['p13'] }}</td>
               <td>{{ $row['p14'] }}</td>
               <td>{{ $row['p15'] }}</td> -->
-              <td>{{ toCurrency($row['point']) }}</td>
-              <td>{{ toCurrency($row['bayar']) }}</td>
+              <td class="text-end">{{ toCurrency($row['point']) }}</td>
+              <td class="text-end">{{ toCurrency($row['bayar']) }}</td>
               <!-- <td>{{ $row['created_at'] }}</td>
               <td>{{ $row['updated_at'] }}</td> -->
-              <td class="text-center">
+              <td class="text-end">
                 <a class="btn btn-success" href="{{asset('/')}}salaries/show/{{ $month->id }}/{{ $row->id }}"><i class="fas fa-file-invoice"></i></i></a>
                 <a class="btn btn-secondary" href="{{asset('/')}}salaries/{{ $month->id }}/{{ $row->id }}/edit"><i class="far fa-edit"></i></a>
                 <a class="btn btn-danger" href="{{asset('/')}}salaries/{{ $month->id }}/{{ $row->id }}/delete"><i class="far fa-trash-alt"></i></a>

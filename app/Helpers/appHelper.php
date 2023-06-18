@@ -53,6 +53,15 @@ function generate_uuid()
   );
 }
 
+function generate_uuid_4()
+{
+  return sprintf(
+    '%04x%04x',
+    mt_rand(0, 0xffff),
+    mt_rand(0, 0xffff)
+  );
+}
+
 function code_id()
 {
   return sprintf(

@@ -151,7 +151,7 @@ class AllowancesController extends Controller
 
   public function tunjangan($id)
   {
-    $row = Allowances::where("id", $id)->first();
+    $row = Allowances::where("id", $id)->where('nip', Auth::user()->nip)->first();
     return view('allowances/tunjangan', ['row' => $row]);
   }
 
@@ -174,8 +174,9 @@ class AllowancesController extends Controller
 
   public function tunjanganpdf($id)
   {
-    $row = Allowances::where('id', $id)->first();
+    $row = Allowances::where('id', $id)->where('nip', Auth::user()->nip)->first();
     $pdf = PDF::loadview('allowances/tunjanganpdf', ['row' => $row])->setPaper('a5');
-    return $pdf->stream();
+    // return $pdf->download('slip_bersih_' . generate_uuid() . '.pdf');
+    return $pdf->stream('slip_bersih_' . generate_uuid_4());
   }
 }

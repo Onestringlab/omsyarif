@@ -25,19 +25,28 @@ Data Users 
         <div class="mb-3 row">
           <label for="nip" class="col-sm-2 col-form-label">NIP</label>
           <div class="col-sm-10">
-            <input class="form-control" type="text" name="nip" value="">
+            @error('nip')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <input class="form-control" type="text" name="nip" value="{{ old('nip') }}">
           </div>
         </div>
         <div class="mb-3 row">
           <label for="name" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
-            <input class="form-control" type="text" name="name" value="">
+            @error('name')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <input class="form-control" type="text" name="name" value="{{ old('name') }}">
           </div>
         </div>
         <div class="mb-3 row">
           <label for="email" class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
-            <input class="form-control" type="text" name="email" value="">
+            @error('email')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <input class="form-control" type="text" name="email" value="{{ old('email') }}">
           </div>
         </div>
         <!-- <div class="mb-3 row">
@@ -55,7 +64,16 @@ Data Users 
         <div class="mb-3 row">
           <label for="password" class="col-sm-2 col-form-label">Password</label>
           <div class="col-sm-10">
+            @error('password')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             <input class="form-control" type="password" name="password" value="">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="password" class="col-sm-2 col-form-label">Confirm Password</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="password" name="confirmed" value="">
           </div>
         </div>
         <!-- <div class="mb-3 row">
@@ -79,13 +97,18 @@ Data Users 
         <div class="mb-3">
           <div class="offset-sm-2 col-sm-10">
             <input type="hidden" name="action" value="{{ $action }}">
-            <button type="submit" class="btn btn-primary">Insert</button>
-            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Tambah</button>
+            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
           </div>
         </div>
         {{ csrf_field() }}
       </form>
       @elseif($action == 'update')
+      <!-- @if ($errors->any())
+      @foreach ($errors->all() as $error)
+      <div>{{$error}}</div>
+      @endforeach
+      @endif -->
       <form class="form-horizontal" action="{{ asset('/') }}users/{{ $row->id }}" method="post">
         <!-- <div class="mb-3 row">
           <label for="id" class="col-sm-2 col-form-label">Id</label>
@@ -123,12 +146,23 @@ Data Users 
             <input class="form-control" type="text" name="role" value="{{ $row->role }}">
           </div>
         </div> -->
-        <!-- <div class="mb-3 row">
+        <div class="mb-3 row">
           <label for="password" class="col-sm-2 col-form-label">Password</label>
           <div class="col-sm-10">
-            <input class="form-control" type="text" name="password" value="{{ $row->password }}">
+            @error('password')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <input class="form-control" type="text" name="password" value="">
+            Kosongkan! Jika tidak ubah password.
           </div>
-        </div> -->
+        </div>
+        <div class="mb-3 row">
+          <label for="password" class="col-sm-2 col-form-label">Confirm Password</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="password" name="confirmed" value="">
+            Kosongkan! Jika tidak ubah password.
+          </div>
+        </div>
         <!-- <div class="mb-3 row">
           <label for="remember_token" class="col-sm-2 col-form-label">Remember_token</label>
           <div class="col-sm-10">
@@ -152,8 +186,8 @@ Data Users 
             @method("PATCH")
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="id" value="{{ $row->id }}">
-            <button type="submit" class="btn btn-warning">Update</button>
-            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
+            <button type="submit" class="btn btn-warning">Edit</button>
+            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
           </div>
         </div>
         {{ csrf_field() }}
@@ -169,19 +203,19 @@ Data Users 
         <div class="mb-3 row">
           <label for="nip" class="col-sm-2 control-label">NIP</label>
           <div class="col-sm-10">
-            : {{ $row->nip }}
+            {{ $row->nip }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="name" class="col-sm-2 control-label">Name</label>
           <div class="col-sm-10">
-            : {{ $row->name }}
+            {{ $row->name }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="email" class="col-sm-2 control-label">Email</label>
           <div class="col-sm-10">
-            : {{ $row->email }}
+            {{ $row->email }}
           </div>
         </div>
         <!-- <div class="mb-3 row">
@@ -225,8 +259,8 @@ Data Users 
             @method("DELETE")
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="id" value="{{ $row->id }}">
-            <button type="submit" class="btn btn-danger">Delete</button>
-            <button type="button" class="btn btn-primary" onclick="button_cancel()">Cancel</button>
+            <button type="submit" class="btn btn-danger">Hapus</button>
+            <button type="button" class="btn btn-primary" onclick="button_cancel()">Batal</button>
           </div>
         </div>
         {{ csrf_field() }}
@@ -241,19 +275,19 @@ Data Users 
       <div class="mb-3 row">
         <label for="nip" class="col-sm-2 control-label">NIP</label>
         <div class="col-sm-10">
-          : {{ $row->nip }}
+          {{ $row->nip }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="name" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
-          : {{ $row->name }}
+          {{ $row->name }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="email" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
-          : {{ $row->email }}
+          {{ $row->email }}
         </div>
       </div>
       <!-- <div class="mb-3 row">
@@ -294,7 +328,7 @@ Data Users 
       </div> -->
       <div class="mb-3">
         <div class="offset-sm-2 col-sm-10">
-          <button type="button" class="btn btn-secondary" onclick="button_cancel()">Back</button>
+          <button type="button" class="btn btn-secondary" onclick="button_cancel()">Kembali</button>
         </div>
       </div>
       @endif

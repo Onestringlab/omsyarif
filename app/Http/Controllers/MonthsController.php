@@ -21,6 +21,10 @@ class MonthsController extends Controller
 
   public function store(Request $request)
   {
+    $this->validate($request, [
+      'month' => 'required',
+      'year' => 'required',
+    ]);
     $months = new Months;
     // $months->id = $request->id;
     $months->month = $request->month;

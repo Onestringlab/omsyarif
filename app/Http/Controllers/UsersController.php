@@ -27,6 +27,15 @@ class UsersController extends Controller
 
   public function store(Request $request)
   {
+
+    $this->validate($request, [
+      'nip' => 'required|string|max:255|min:8',
+      'name' => 'required|string|max:255',
+      'email' => 'required|string|email|max:255|unique:users',
+      'password' => 'required|string|min:8|same:confirmed',
+      'confirmed' => 'required|string|min:8',
+    ]);
+
     $users = new Users;
     // $users->id = $request->id;
     $users->name = $request->name;
@@ -56,6 +65,13 @@ class UsersController extends Controller
 
   public function update(Request $request)
   {
+    $this->validate($request, [
+      'nip' => 'required|string|max:255|min:8',
+      'name' => 'required|string|max:255',
+      'email' => 'required|string|email|max:255',
+      'password' => 'same:confirmed',
+    ]);
+
     $users = Users::find($request->id);
     // $users->id = $request->id;
     $users->name = $request->name;
@@ -63,7 +79,8 @@ class UsersController extends Controller
     $users->email = $request->email;
     // $users->email_verified_at = $request->email_verified_at;
     // $users->role = $request->role;
-    // $users->password = $request->password;
+    if (isset($request->password))
+      $users->password = Hash::make($request->password);
     // $users->remember_token = $request->remember_token;
     // $users->created_at = $request->created_at;
     // $users->updated_at = $request->updated_at;

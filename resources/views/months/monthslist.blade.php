@@ -12,21 +12,21 @@ Data Months 
       <div class="table-responsive">
         <table class="table table-striped table-hover ">
           <thead class="thead-dark">
-            <tr class="align-middle">
+            <tr class="align-middle text-center">
               <th width="60">No</th>
               <th width="120">Bersih</th>
               <th width="120">Dibayarkan</th>
-              <th>Bulan</th>
+              <th width="90">Bulan</th>
               <th width="90">Tahun</th>
               <!-- <th>Created_at</th> -->
-              <th>Waktu</th>
+              <th width="180">Waktu</th>
               <th class="text-center"><a class="btn btn-primary" href="{{asset('/')}}months/create"><i class="fas fa-plus"></i></a></th>
             </tr>
           </thead>
           <tbody>
             @php ($no = 1)
             @foreach ($rows as $row)
-            <tr class="align-middle">
+            <tr class="align-middle text-center">
               <td>{{ $no++ }}.</td>
               <td><a class="btn btn-secondary" href="{{asset('/')}}allowances/data/{{ $row->id }}"><i class="fa-regular fa-file"></i></a></td>
               <td><a class="btn btn-secondary" href="{{asset('/')}}salaries/data/{{ $row->id }}"><i class="fa-regular fa-file-lines"></i></a></td>

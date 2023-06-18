@@ -124,7 +124,7 @@ class SalariesController extends Controller
   public function data($month_id)
   {
     $rows = Salaries::where('month_id', $month_id)->get();
-    $month = Months::where('id', $month_id)->first();
+    $month = Months::where('id', $month_id)->where('nip', Auth::user()->nip)->first();
     return view('salaries/salarieslist', ['rows' => $rows, 'month' => $month]);
   }
 
@@ -143,10 +143,10 @@ class SalariesController extends Controller
 
   public function slippdf($id)
   {
-    $row = Salaries::where('id', $id)->first();
+    $row = Salaries::where('id', $id)->where('nip', Auth::user()->nip)->first();
     $pdf = PDF::loadview('salaries/slippdf', ['row' => $row])->setPaper('a5');
-    // return $pdf->download('slip' + $id + '.pdf');
-    return $pdf->stream();
+    // return $pdf->download('slip_dibayarkan' . generate_uuid() . '.pdf');
+    return $pdf->stream('slip_dibayarkan' . generate_uuid_4());
   }
 
   public function import(Request $request)
