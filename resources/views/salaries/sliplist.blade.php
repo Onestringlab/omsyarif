@@ -17,7 +17,7 @@ Slip Gaji Dibayarkan
         <table class="table table-striped table-hover ">
           <thead class="thead-dark">
             <tr>
-              <th width="60">No</th>
+              <th width="40">No</th>
               <th>Bulan</th>
               <th>Dibayarkan</th>
               <th></th>
@@ -29,7 +29,7 @@ Slip Gaji Dibayarkan
             <tr>
               <td>{{ $no++ }}.</td>
               <td>{{ $row->months->month }} {{ $row->months->year }}</td>
-              <td>{{ $row['bayar'] }}</td>
+              <td>{{ toCurrency($row['bayar']) }}</td>
               <td>
                 <a class="btn btn-primary" href="{{asset('/')}}slip/{{ $row->id }}">
                   <i class="fas fa-receipt"></i>

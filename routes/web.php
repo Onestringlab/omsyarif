@@ -26,6 +26,8 @@ Route::middleware(['auth', 'checkrole:user,admin'])->group(
 			return view('/home');
 		});
 		Route::get('/home', [HomeController::class, 'index'])->name('home');
+		Route::get('/password/{id}', [UsersController::class, 'password']);
+		Route::post('/passwordupdate', [UsersController::class, 'passwordupdate']);
 
 		Route::controller(SalariesController::class)->group(function () {
 			Route::get('/sliplist', 'sliplist')->name('sliplist');

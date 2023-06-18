@@ -11,8 +11,14 @@ Data Users 
       location.replace("{{ asset('/') }}users");
     }
   </script>
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ asset('/users') }}">Data Pengguna</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Pengguna</li>
+    </ol>
+  </nav>
   <div class="card border-success">
-    <h5 class="card-header text-bg-success"> Data Users</h5>
+    <h5 class="card-header text-bg-success"> Data Pengguna</h5>
     <div class="card-body">
       @if($action == 'insert')
       <form class="form-horizontal" action="{{ asset('/') }}users" method="post">

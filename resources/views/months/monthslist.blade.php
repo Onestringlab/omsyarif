@@ -7,7 +7,7 @@ Data Months 
 @section('content')
 <div class="container">
   <div class="card border-success">
-    <h5 class="card-header text-bg-success"> Data Slip Gaji</h5>
+    <h5 class="card-header text-bg-success"> Data Gaji</h5>
     <div class="card-body">
       <div class="table-responsive">
         <table class="table table-striped table-hover ">
@@ -28,8 +28,8 @@ Data Months 
             @foreach ($rows as $row)
             <tr class="align-middle text-center">
               <td>{{ $no++ }}.</td>
-              <td><a class="btn btn-secondary" href="{{asset('/')}}allowances/data/{{ $row->id }}"><i class="fa-regular fa-file"></i></a></td>
-              <td><a class="btn btn-secondary" href="{{asset('/')}}salaries/data/{{ $row->id }}"><i class="fa-regular fa-file-lines"></i></a></td>
+              <td><a class="btn btn-warning" href="{{asset('/')}}allowances/data/{{ $row->id }}"><i class="fa-regular fa-file"></i></a></td>
+              <td><a class="btn btn-success" href="{{asset('/')}}salaries/data/{{ $row->id }}"><i class="fa-regular fa-file-lines"></i></a></td>
               <td>{{ $row['month'] }}</td>
               <td>{{ $row['year'] }}</td>
               <!-- <td>{{ $row['created_at'] }}</td> -->

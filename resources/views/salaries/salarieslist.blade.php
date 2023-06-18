@@ -6,8 +6,14 @@ Data Salaries 
 
 @section('content')
 <div class="container">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data Gaji</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Dibayarkan</li>
+    </ol>
+  </nav>
   <div class="card border-success">
-    <h5 class="card-header text-bg-success"> Slip Gaji Dibayarkan </h5>
+    <h5 class="card-header text-bg-success"> Data Gaji Dibayarkan </h5>
     <div class="card-body">
       <h5 class="card-title">{{$month->month}} {{$month->year}}</h5>
       <div class="table-responsive">

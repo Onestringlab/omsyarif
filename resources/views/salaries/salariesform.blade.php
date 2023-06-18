@@ -11,6 +11,13 @@ Data Salaries 
   }
 </script>
 <div class="container">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data Gaji</a></li>
+      <li class="breadcrumb-item"><a href="{{asset('/')}}salaries/data/{{ $month_id }}">Dibayarkan</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Slip Gaji</li>
+    </ol>
+  </nav>
   <div class="card border-success">
     <h5 class="card-header text-bg-success"> Data Slip Gaji</h5>
     <div class="card-body">
@@ -23,7 +30,7 @@ Data Salaries 
           </div>
         </div> -->
         <!-- <div class="mb-3 row">
-          <label for="month_id" class="col-sm-2 col-form-label">Bulan - Tahun</label>
+          <label for="month_id" class="col-sm-2 col-form-label">Bulan</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="month_id" value="">
           </div>
@@ -198,7 +205,7 @@ Data Salaries 
           </div>
         </div> -->
         <div class="mb-3 row">
-          <label for="month_id" class="col-sm-2 col-form-label">Bulan - Tahun</label>
+          <label for="month_id" class="col-sm-2 col-form-label">Bulan</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="month_id" value="{{ $row->month_id }}">
           </div>
@@ -373,7 +380,7 @@ Data Salaries 
           </div>
         </div> -->
         <div class="mb-3 row">
-          <label for="month_id" class="col-sm-2 control-label">Bulan - Tahun</label>
+          <label for="month_id" class="col-sm-2 control-label">Bulan</label>
           <div class="col-sm-10">
             {{ $row->months->month }} - {{ $row->months->year }}
           </div>
@@ -411,109 +418,109 @@ Data Salaries 
         <div class="mb-3 row">
           <label for="bersih" class="col-sm-2 control-label">Bersih</label>
           <div class="col-sm-10">
-            {{ $row->bersih }}
+            {{ toCurrency($row->bersih) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p1" class="col-sm-2 control-label">P1</label>
           <div class="col-sm-10">
-            {{ $row->p1 }}
+            {{ toCurrency($row->p1) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p2" class="col-sm-2 control-label">P2</label>
           <div class="col-sm-10">
-            {{ $row->p2 }}
+            {{ toCurrency($row->p2) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p3" class="col-sm-2 control-label">P3</label>
           <div class="col-sm-10">
-            {{ $row->p3 }}
+            {{ toCurrency($row->p3) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p4" class="col-sm-2 control-label">P4</label>
           <div class="col-sm-10">
-            {{ $row->p4 }}
+            {{ toCurrency($row->p4) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p5" class="col-sm-2 control-label">P5</label>
           <div class="col-sm-10">
-            {{ $row->p5 }}
+            {{ toCurrency($row->p5) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p6" class="col-sm-2 control-label">P6</label>
           <div class="col-sm-10">
-            {{ $row->p6 }}
+            {{ toCurrency($row->p6) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p7" class="col-sm-2 control-label">P7</label>
           <div class="col-sm-10">
-            {{ $row->p7 }}
+            {{ toCurrency($row->p7) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p8" class="col-sm-2 control-label">P8</label>
           <div class="col-sm-10">
-            {{ $row->p8 }}
+            {{ toCurrency($row->p8) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p9" class="col-sm-2 control-label">P9</label>
           <div class="col-sm-10">
-            {{ $row->p9 }}
+            {{ toCurrency($row->p9) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p10" class="col-sm-2 control-label">P10</label>
           <div class="col-sm-10">
-            {{ $row->p10 }}
+            {{ toCurrency($row->p10) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p11" class="col-sm-2 control-label">P11</label>
           <div class="col-sm-10">
-            {{ $row->p11 }}
+            {{ toCurrency($row->p11) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p12" class="col-sm-2 control-label">P12</label>
           <div class="col-sm-10">
-            {{ $row->p12 }}
+            {{ toCurrency($row->p12) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p13" class="col-sm-2 control-label">P13</label>
           <div class="col-sm-10">
-            {{ $row->p13 }}
+            {{ toCurrency($row->p13) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p14" class="col-sm-2 control-label">P14</label>
           <div class="col-sm-10">
-            {{ $row->p14 }}
+            {{ toCurrency($row->p14) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="p15" class="col-sm-2 control-label">P15</label>
           <div class="col-sm-10">
-            {{ $row->p15 }}
+            {{ toCurrency($row->p15) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="point" class="col-sm-2 control-label">Potongan Internal</label>
           <div class="col-sm-10">
-            {{ $row->point }}
+            {{ toCurrency($row->point) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="bayar" class="col-sm-2 control-label">Bayar</label>
           <div class="col-sm-10">
-            {{ $row->bayar }}
+            {{ toCurrency($row->bayar) }}
           </div>
         </div>
         <!-- <div class="mb-3 row">
@@ -547,9 +554,9 @@ Data Salaries 
         </div>
       </div> -->
       <div class="mb-3 row">
-        <label for="month_id" class="col-sm-2 control-label">Bulan - Tahun</label>
+        <label for="month_id" class="col-sm-2 control-label">Bulan</label>
         <div class="col-sm-10">
-          {{ $row->months->month }} - {{ $row->months->year }}
+          {{ $row->months->month }} {{ $row->months->year }}
         </div>
       </div>
       <div class="mb-3 row">
@@ -585,109 +592,109 @@ Data Salaries 
       <div class="mb-3 row">
         <label for="bersih" class="col-sm-2 control-label">Bersih</label>
         <div class="col-sm-10">
-          {{ $row->bersih }}
+          {{ toCurrency($row->bersih) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p1" class="col-sm-2 control-label">P1</label>
         <div class="col-sm-10">
-          {{ $row->p1 }}
+          {{ toCurrency($row->p1) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p2" class="col-sm-2 control-label">P2</label>
         <div class="col-sm-10">
-          {{ $row->p2 }}
+          {{ toCurrency($row->p2) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p3" class="col-sm-2 control-label">P3</label>
         <div class="col-sm-10">
-          {{ $row->p3 }}
+          {{ toCurrency($row->p3) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p4" class="col-sm-2 control-label">P4</label>
         <div class="col-sm-10">
-          {{ $row->p4 }}
+          {{ toCurrency($row->p4) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p5" class="col-sm-2 control-label">P5</label>
         <div class="col-sm-10">
-          {{ $row->p5 }}
+          {{ toCurrency($row->p5) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p6" class="col-sm-2 control-label">P6</label>
         <div class="col-sm-10">
-          {{ $row->p6 }}
+          {{ toCurrency($row->p6) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p7" class="col-sm-2 control-label">P7</label>
         <div class="col-sm-10">
-          {{ $row->p7 }}
+          {{ toCurrency($row->p7) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p8" class="col-sm-2 control-label">P8</label>
         <div class="col-sm-10">
-          {{ $row->p8 }}
+          {{ toCurrency($row->p8) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p9" class="col-sm-2 control-label">P9</label>
         <div class="col-sm-10">
-          {{ $row->p9 }}
+          {{ toCurrency($row->p9) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p10" class="col-sm-2 control-label">P10</label>
         <div class="col-sm-10">
-          {{ $row->p10 }}
+          {{ toCurrency($row->p10) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p11" class="col-sm-2 control-label">P11</label>
         <div class="col-sm-10">
-          {{ $row->p11 }}
+          {{ toCurrency($row->p11) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p12" class="col-sm-2 control-label">P12</label>
         <div class="col-sm-10">
-          {{ $row->p12 }}
+          {{ toCurrency($row->p12) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p13" class="col-sm-2 control-label">P13</label>
         <div class="col-sm-10">
-          {{ $row->p13 }}
+          {{ toCurrency($row->p13) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p14" class="col-sm-2 control-label">P14</label>
         <div class="col-sm-10">
-          {{ $row->p14 }}
+          {{ toCurrency($row->p14) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="p15" class="col-sm-2 control-label">P15</label>
         <div class="col-sm-10">
-          {{ $row->p15 }}
+          {{ toCurrency($row->p15) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="point" class="col-sm-2 control-label">Potongan Internal</label>
         <div class="col-sm-10">
-          {{ $row->point }}
+          {{ toCurrency($row->point) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="bayar" class="col-sm-2 control-label">Bayar</label>
         <div class="col-sm-10">
-          {{ $row->bayar }}
+          {{ toCurrency($row->bayar) }}
         </div>
       </div>
       <!-- <div class="mb-3 row">

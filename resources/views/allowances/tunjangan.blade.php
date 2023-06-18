@@ -11,15 +11,27 @@ Slip Gaji Dibayarkan
       location.replace("{{ asset('/') }}tunjanganlist");
     }
   </script>
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{{ asset('/tunjanganlist') }}">Slip Gaji Bersih</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        {{ $row->months->month }} {{ $row->months->year }}
+      </li>
+    </ol>
+  </nav>
   <div class="card border-success">
-    <h5 class="card-header text-bg-success"> Slip Gaji Bersih</h5>
+    <h5 class="card-header text-bg-success"> Slip Gaji Bersih
+      {{ $row->months->month }} {{ $row->months->year }}
+    </h5>
     <div class="card-body">
       <!-- <div class="mb-3 row">
           <label for="id" class="col-sm-2 control-label">Id</label>
           <div class="col-sm-10">
             {{ $row->id }}
-          </div>
-        </div> -->
+  </div>
+</div> -->
       <!-- <div class="mb-3 row">
           <label for="month_id" class="col-sm-2 control-label">Month_id</label>
           <div class="col-sm-10">
@@ -59,157 +71,157 @@ Slip Gaji Dibayarkan
       <div class="mb-3 row">
         <label for="gjpokok" class="col-sm-2 control-label">Gjpokok</label>
         <div class="col-sm-10">
-          {{ $row->gjpokok }}
+          {{ toCurrency($row->gjpokok) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjistri" class="col-sm-2 control-label">Tjistri</label>
         <div class="col-sm-10">
-          {{ $row->tjistri }}
+          {{ toCurrency($row->tjistri) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjanak" class="col-sm-2 control-label">Tjanak</label>
         <div class="col-sm-10">
-          {{ $row->tjanak }}
+          {{ toCurrency($row->tjanak) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjupns" class="col-sm-2 control-label">Tjupns</label>
         <div class="col-sm-10">
-          {{ $row->tjupns }}
+          {{ toCurrency($row->tjupns) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjstruk" class="col-sm-2 control-label">Tjstruk</label>
         <div class="col-sm-10">
-          {{ $row->tjstruk }}
+          {{ toCurrency($row->tjstruk) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjfungs" class="col-sm-2 control-label">Tjfungs</label>
         <div class="col-sm-10">
-          {{ $row->tjfungs }}
+          {{ toCurrency($row->tjfungs) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjdaerah" class="col-sm-2 control-label">Tjdaerah</label>
         <div class="col-sm-10">
-          {{ $row->tjdaerah }}
+          {{ toCurrency($row->tjdaerah) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjpencil" class="col-sm-2 control-label">Tjpencil</label>
         <div class="col-sm-10">
-          {{ $row->tjpencil }}
+          {{ toCurrency($row->tjpencil) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjlain" class="col-sm-2 control-label">Tjlain</label>
         <div class="col-sm-10">
-          {{ $row->tjlain }}
+          {{ toCurrency($row->tjlain) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjkompen" class="col-sm-2 control-label">Tjkompen</label>
         <div class="col-sm-10">
-          {{ $row->tjkompen }}
+          {{ toCurrency($row->tjkompen) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="pembul" class="col-sm-2 control-label">Pembul</label>
         <div class="col-sm-10">
-          {{ $row->pembul }}
+          {{ toCurrency($row->pembul) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjberas" class="col-sm-2 control-label">Tjberas</label>
         <div class="col-sm-10">
-          {{ $row->tjberas }}
+          {{ toCurrency($row->tjberas) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="tjpph" class="col-sm-2 control-label">Tjpph</label>
         <div class="col-sm-10">
-          {{ $row->tjpph }}
+          {{ toCurrency($row->tjpph) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="kotor" class="col-sm-2 control-label">Kotor</label>
         <div class="col-sm-10">
-          {{ $row->kotor }}
+          {{ toCurrency($row->kotor) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="potpfkbul" class="col-sm-2 control-label">Potpfkbul</label>
         <div class="col-sm-10">
-          {{ $row->potpfkbul }}
+          {{ toCurrency($row->potpfkbul) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="potpfk2" class="col-sm-2 control-label">Potpfk2</label>
         <div class="col-sm-10">
-          {{ $row->potpfk2 }}
+          {{ toCurrency($row->potpfk2) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="potpfk10" class="col-sm-2 control-label">Potpfk10</label>
         <div class="col-sm-10">
-          {{ $row->potpfk10 }}
+          {{ toCurrency($row->potpfk10) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="potpph" class="col-sm-2 control-label">Potpph</label>
         <div class="col-sm-10">
-          {{ $row->potpph }}
+          {{ toCurrency($row->potpph) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="potswrum" class="col-sm-2 control-label">Potswrum</label>
         <div class="col-sm-10">
-          {{ $row->potswrum }}
+          {{ toCurrency($row->potswrum) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="potkelbtj" class="col-sm-2 control-label">Potkelbtj</label>
         <div class="col-sm-10">
-          {{ $row->potkelbtj }}
+          {{ toCurrency($row->potkelbtj) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="potlain" class="col-sm-2 control-label">Potlain</label>
         <div class="col-sm-10">
-          {{ $row->potlain }}
+          {{ toCurrency($row->potlain) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="pottabrum" class="col-sm-2 control-label">Pottabrum</label>
         <div class="col-sm-10">
-          {{ $row->pottabrum }}
+          {{ toCurrency($row->pottabrum) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="bpjs" class="col-sm-2 control-label">BPJS</label>
         <div class="col-sm-10">
-          {{ $row->bpjs }}
+          {{ toCurrency($row->bpjs) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="bpjs2" class="col-sm-2 control-label">BPJS2</label>
         <div class="col-sm-10">
-          {{ $row->bpjs2 }}
+          {{ toCurrency($row->bpjs2) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="totpot" class="col-sm-2 control-label">Totpot</label>
         <div class="col-sm-10">
-          {{ $row->totpot }}
+          {{ toCurrency($row->totpot) }}
         </div>
       </div>
       <div class="mb-3 row">
         <label for="bersih" class="col-sm-2 control-label">Bersih</label>
         <div class="col-sm-10">
-          {{ $row->bersih }}
+          {{ toCurrency($row->bersih) }}
         </div>
       </div>
       <!-- <div class="mb-3 row">

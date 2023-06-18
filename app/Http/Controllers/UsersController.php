@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -16,7 +17,7 @@ class UsersController extends Controller
 
   public function index()
   {
-    $rows = Users::all();
+    $rows = Users::orderBy('name', 'ASC')->get();
     return view('users/userslist', ['rows' => $rows]);
   }
 
@@ -99,5 +100,27 @@ class UsersController extends Controller
     $users = Users::find($id);
     $users->delete();
     return redirect('/users');
+  }
+
+  public function password($id)
+  {
+    $users = Users::where('id', $id)->where('nip', Auth::user()->nip)->first();
+    return view('users/passwordform', ['row' => $users]);
+  }
+  public function passwordupdate(Request $request)
+  {
+    $this->validate($request, [
+      'password' => 'required|string|min:8|same:confirmed',
+    ]);
+    $users = Users::where('id', $request->id)->first();
+    if (isset($request->password)) {
+      $users->password = Hash::make($request->password);
+      $users->save();
+      $message = "Password berhasil diubah!";
+    } else {
+      $message = "Password tidak berubah!";
+    }
+    // return view('users/passwordform', ['row' => $users, 'message' => $message]);
+    return redirect('/password' . '/' . $request->id)->with(['message' => $message]);
   }
 }

@@ -11,8 +11,14 @@ Data Months 
       location.replace("{{ asset('/') }}months");
     }
   </script>
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data Gaji</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Bulan</li>
+    </ol>
+  </nav>
   <div class="card border-success">
-    <h5 class="card-header text-bg-success"> Data Months</h5>
+    <h5 class="card-header text-bg-success"> Data Bulan</h5>
     <div class="card-body">
       @if($action == 'insert')
       <form class="form-horizontal" action="{{ asset('/') }}months" method="post">
@@ -23,7 +29,7 @@ Data Months 
           </div>
         </div> -->
         <div class="mb-3 row">
-          <label for="month" class="col-sm-2 col-form-label">Month</label>
+          <label for="month" class="col-sm-2 col-form-label">Bulan</label>
           <div class="col-sm-10">
             @error('month')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -45,7 +51,7 @@ Data Months 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="year" class="col-sm-2 col-form-label">Year</label>
+          <label for="year" class="col-sm-2 col-form-label">Tahun</label>
           <div class="col-sm-10">
             @error('year')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -83,7 +89,7 @@ Data Months 
           </div>
         </div> -->
         <div class="mb-3 row">
-          <label for="month" class="col-sm-2 col-form-label">Month</label>
+          <label for="month" class="col-sm-2 col-form-label">Bulan</label>
           <div class="col-sm-10">
             @error('month')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -105,9 +111,9 @@ Data Months 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="year" class="col-sm-2 col-form-label">Year</label>
+          <label for="year" class="col-sm-2 col-form-label">Tahun</label>
           <div class="col-sm-10">
-            <input class="form-control" type="text" name="year" value="{{ $row->year }}">
+            <input class="form-control" type="number" name="year" value="{{ $row->year }}">
           </div>
         </div>
         <!-- <div class="mb-3 row">
@@ -144,13 +150,13 @@ Data Months 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="month" class="col-sm-2 control-label">Month</label>
+          <label for="month" class="col-sm-2 control-label">Bulan</label>
           <div class="col-sm-10">
             {{ $row->month }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="year" class="col-sm-2 control-label">Year</label>
+          <label for="year" class="col-sm-2 control-label">Tahun</label>
           <div class="col-sm-10">
             {{ $row->year }}
           </div>
@@ -186,13 +192,13 @@ Data Months 
         </div>
       </div> -->
       <div class="mb-3 row">
-        <label for="month" class="col-sm-2 control-label">Month</label>
+        <label for="month" class="col-sm-2 control-label">Bulan</label>
         <div class="col-sm-10">
           {{ $row->month }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="year" class="col-sm-2 control-label">Year</label>
+        <label for="year" class="col-sm-2 control-label">Tahun</label>
         <div class="col-sm-10">
           {{ $row->year }}
         </div>

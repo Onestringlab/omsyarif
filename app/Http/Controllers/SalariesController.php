@@ -123,8 +123,8 @@ class SalariesController extends Controller
 
   public function data($month_id)
   {
-    $rows = Salaries::where('month_id', $month_id)->get();
-    $month = Months::where('id', $month_id)->where('nip', Auth::user()->nip)->first();
+    $rows = Salaries::where('month_id', $month_id)->orderBy('name', 'ASC')->get();
+    $month = Months::where('id', $month_id)->first();
     return view('salaries/salarieslist', ['rows' => $rows, 'month' => $month]);
   }
 
@@ -137,7 +137,7 @@ class SalariesController extends Controller
 
   public function slip($id)
   {
-    $row = Salaries::where('id', $id)->first();
+    $row = Salaries::where('id', $id)->where('nip', Auth::user()->nip)->first();
     return view('salaries/slip', ['row' => $row]);
   }
 
