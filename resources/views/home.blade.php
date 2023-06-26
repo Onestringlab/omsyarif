@@ -7,8 +7,7 @@
 			<div class="card border-success ">
 				<div class="card-header text-bg-success ">ONLINE MONITORING OF SALARY AND REMUNERATION INFORMATION</div>
 				<div class="card-body">
-					<div>OM-SYARIEF adalah sebuah platform yang memungkinkan pegawai Pengadilan Negeri Pontianak untuk mengakses dan melihat informasi terkait slip gaji dan tunjangan kinerja secara online. Aplikasi ini bertujuan untuk memberikan kemudahan dan aksesibilitas bagi pegawai Pengadilan Negeri Pontianak dalam memeriksa rincian gaji mereka dengan cepat dan aman.</div>
-					<div>Melalui aplikasi melihat slip gaji pegawai, karyawan dapat dengan mudah mengakses informasi gaji dan tunjangan kinerja tanpa harus menghubungi departemen HR atau keuangan perusahaan. Ini membantu meningkatkan transparansi dan memudahkan karyawan dalam memverifikasi dan memeriksa konsistensi penggajian.</div>
+					<div>OM-SYARIF adalah aplikasi online internal satuan kerja yang berguna bagi pegawai untuk memonitor informasi gaji dan tunjangan dengan mudah dan aman, di mana saja dan kapan saja.</div>
 				</div>
 			</div>
 		</div>

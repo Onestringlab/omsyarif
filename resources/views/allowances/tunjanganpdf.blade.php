@@ -90,7 +90,7 @@
     </tr>
     <tr>
       <td>T.Ta. Umum</td>
-      <td class="text-right">{{toCurrency($row->tjkompen)}}</td>
+      <td class="text-right">{{toCurrency($row->tjlain)}}</td>
       <td>Pot. PPH</td>
       <td class="text-right">{{toCurrency($row->potpph)}}</td>
     </tr>
@@ -104,13 +104,13 @@
       <td>T.Terpencil</td>
       <td class="text-right">{{toCurrency($row->tjpencil)}}</td>
       <td>Tunggakan</td>
-      <td class="text-right">{{toCurrency($row->potpfkbul)}}</td>
+      <td class="text-right">{{toCurrency($row->potpfk2)}}</td>
     </tr>
     <tr>
       <td>T.Struktur</td>
       <td class="text-right">{{toCurrency($row->tjstruk)}}</td>
       <td>Utang</td>
-      <td class="text-right">{{toCurrency($row->potpfkbul)}}</td>
+      <td class="text-right">{{toCurrency($row->potkelbtj)}}</td>
     </tr>
     <tr>
       <td>T.Fungsi</td>
@@ -120,7 +120,7 @@
     </tr>
     <tr>
       <td>T.Lain</td>
-      <td class="text-right">{{toCurrency($row->tjlain)}}</td>
+      <td class="text-right">{{toCurrency($row->tjkompen)}}</td>
       <td>Taperum</td>
       <td class="text-right">{{toCurrency($row->pottabrum)}}</td>
     </tr>

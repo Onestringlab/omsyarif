@@ -8,7 +8,7 @@ Data Users 
 <div class="container">
   <script>
     function button_cancel() {
-      location.replace("{{ asset('password') . '/' . $row->id }}");
+      location.replace("{{ asset('home')}}");
     }
   </script>
   <div class="card border-success">

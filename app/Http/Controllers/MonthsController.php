@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Months;
+use App\Models\Salaries;
+use App\Models\Allowances;
 use Illuminate\Http\Request;
 
 class MonthsController extends Controller
@@ -67,6 +69,8 @@ class MonthsController extends Controller
 
   public function destroy($id)
   {
+    Allowances::where('month_id', '=', $id)->delete();
+    Salaries::where('month_id', '=', $id)->delete();
     $months = Months::find($id);
     $months->delete();
     return redirect('/months');

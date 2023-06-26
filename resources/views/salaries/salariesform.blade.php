@@ -72,91 +72,91 @@ Data Salaries 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p1" class="col-sm-2 col-form-label">P1</label>
+          <label for="p1" class="col-sm-2 col-form-label">Koperasi</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p1" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p2" class="col-sm-2 col-form-label">P2</label>
+          <label for="p2" class="col-sm-2 col-form-label">IKAHI</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p2" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p3" class="col-sm-2 col-form-label">P3</label>
+          <label for="p3" class="col-sm-2 col-form-label">PTWP</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p3" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p4" class="col-sm-2 col-form-label">P4</label>
+          <label for="p4" class="col-sm-2 col-form-label">YDSH</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p4" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p5" class="col-sm-2 col-form-label">P5</label>
+          <label for="p5" class="col-sm-2 col-form-label">Sumbangan Honorer</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p5" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p6" class="col-sm-2 col-form-label">P6</label>
+          <label for="p6" class="col-sm-2 col-form-label">IPASPI</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p6" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p7" class="col-sm-2 col-form-label">P7</label>
+          <label for="p7" class="col-sm-2 col-form-label">DYK</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p7" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p8" class="col-sm-2 col-form-label">P8</label>
+          <label for="p8" class="col-sm-2 col-form-label">Senam</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p8" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p9" class="col-sm-2 col-form-label">P9</label>
+          <label for="p9" class="col-sm-2 col-form-label">BRI</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p9" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p10" class="col-sm-2 col-form-label">P10</label>
+          <label for="p10" class="col-sm-2 col-form-label">BDBS</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p10" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p11" class="col-sm-2 col-form-label">P11</label>
+          <label for="p11" class="col-sm-2 col-form-label">Bank Kalbar Syariah</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p11" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p12" class="col-sm-2 col-form-label">P12</label>
+          <label for="p12" class="col-sm-2 col-form-label">Dana Sosial Hakim</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p12" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p13" class="col-sm-2 col-form-label">P13</label>
+          <label for="p13" class="col-sm-2 col-form-label">DYK Cabang</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p13" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p14" class="col-sm-2 col-form-label">P14</label>
+          <label for="p14" class="col-sm-2 col-form-label">Arisan DYK Tahunan</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p14" value="0">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p15" class="col-sm-2 col-form-label">P15</label>
+          <label for="p15" class="col-sm-2 col-form-label">Mushola</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p15" value="0">
           </div>
@@ -189,7 +189,6 @@ Data Salaries 
           <div class="offset-sm-2 col-sm-10">
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="month_id" value="{{ $month_id }}">
-
             <button type="submit" class="btn btn-primary">Tambah</button>
             <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
           </div>
@@ -204,12 +203,12 @@ Data Salaries 
             <input class="form-control" type="text" name="id" value="{{ $row->id }}">
           </div>
         </div> -->
-        <div class="mb-3 row">
+        <!-- <div class="mb-3 row">
           <label for="month_id" class="col-sm-2 col-form-label">Bulan</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="month_id" value="{{ $row->month_id }}">
           </div>
-        </div>
+        </div> -->
         <div class="mb-3 row">
           <label for="nip" class="col-sm-2 col-form-label">NIP</label>
           <div class="col-sm-10">
@@ -247,91 +246,91 @@ Data Salaries 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p1" class="col-sm-2 col-form-label">P1</label>
+          <label for="p1" class="col-sm-2 col-form-label">Koperasi</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p1" value="{{ $row->p1 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p2" class="col-sm-2 col-form-label">P2</label>
+          <label for="p2" class="col-sm-2 col-form-label">IKAHI</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p2" value="{{ $row->p2 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p3" class="col-sm-2 col-form-label">P3</label>
+          <label for="p3" class="col-sm-2 col-form-label">PTWP</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p3" value="{{ $row->p3 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p4" class="col-sm-2 col-form-label">P4</label>
+          <label for="p4" class="col-sm-2 col-form-label">YDSH</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p4" value="{{ $row->p4 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p5" class="col-sm-2 col-form-label">P5</label>
+          <label for="p5" class="col-sm-2 col-form-label">Sumbangan Honorer</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p5" value="{{ $row->p5 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p6" class="col-sm-2 col-form-label">P6</label>
+          <label for="p6" class="col-sm-2 col-form-label">IPASPI</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p6" value="{{ $row->p6 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p7" class="col-sm-2 col-form-label">P7</label>
+          <label for="p7" class="col-sm-2 col-form-label">DYK</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p7" value="{{ $row->p7 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p8" class="col-sm-2 col-form-label">P8</label>
+          <label for="p8" class="col-sm-2 col-form-label">Senam</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p8" value="{{ $row->p8 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p9" class="col-sm-2 col-form-label">P9</label>
+          <label for="p9" class="col-sm-2 col-form-label">BRI</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p9" value="{{ $row->p9 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p10" class="col-sm-2 col-form-label">P10</label>
+          <label for="p10" class="col-sm-2 col-form-label">BDBS</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p10" value="{{ $row->p10 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p11" class="col-sm-2 col-form-label">P11</label>
+          <label for="p11" class="col-sm-2 col-form-label">Bank Kalbar Syariah</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p11" value="{{ $row->p11 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p12" class="col-sm-2 col-form-label">P12</label>
+          <label for="p12" class="col-sm-2 col-form-label">Dana Sosial Hakim</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p12" value="{{ $row->p12 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p13" class="col-sm-2 col-form-label">P13</label>
+          <label for="p13" class="col-sm-2 col-form-label">DYK Cabang</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p13" value="{{ $row->p13 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p14" class="col-sm-2 col-form-label">P14</label>
+          <label for="p14" class="col-sm-2 col-form-label">Arisan DYK Tahunan</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p14" value="{{ $row->p14 }}">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p15" class="col-sm-2 col-form-label">P15</label>
+          <label for="p15" class="col-sm-2 col-form-label">Mushola</label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="p15" value="{{ $row->p15 }}">
           </div>
@@ -365,6 +364,7 @@ Data Salaries 
             @method("PATCH")
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="id" value="{{ $row->id }}">
+            <input type="hidden" name="month_id" value="{{ $month_id }}">
             <button type="submit" class="btn btn-warning">Edit</button>
             <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
           </div>
@@ -422,91 +422,91 @@ Data Salaries 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p1" class="col-sm-2 control-label">P1</label>
+          <label for="p1" class="col-sm-2 control-label">Koperasi</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p1) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p2" class="col-sm-2 control-label">P2</label>
+          <label for="p2" class="col-sm-2 control-label">IKAHI</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p2) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p3" class="col-sm-2 control-label">P3</label>
+          <label for="p3" class="col-sm-2 control-label">PTWP</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p3) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p4" class="col-sm-2 control-label">P4</label>
+          <label for="p4" class="col-sm-2 control-label">YDSH</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p4) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p5" class="col-sm-2 control-label">P5</label>
+          <label for="p5" class="col-sm-2 control-label">Sumbangan Honorer</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p5) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p6" class="col-sm-2 control-label">P6</label>
+          <label for="p6" class="col-sm-2 control-label">IPASPI</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p6) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p7" class="col-sm-2 control-label">P7</label>
+          <label for="p7" class="col-sm-2 control-label">DYK</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p7) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p8" class="col-sm-2 control-label">P8</label>
+          <label for="p8" class="col-sm-2 control-label">Senam</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p8) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p9" class="col-sm-2 control-label">P9</label>
+          <label for="p9" class="col-sm-2 control-label">BRI</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p9) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p10" class="col-sm-2 control-label">P10</label>
+          <label for="p10" class="col-sm-2 control-label">BDBS</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p10) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p11" class="col-sm-2 control-label">P11</label>
+          <label for="p11" class="col-sm-2 control-label">Bank Kalbar Syariah</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p11) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p12" class="col-sm-2 control-label">P12</label>
+          <label for="p12" class="col-sm-2 control-label">Dana Sosial Hakim</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p12) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p13" class="col-sm-2 control-label">P13</label>
+          <label for="p13" class="col-sm-2 control-label">DYK Cabang</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p13) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p14" class="col-sm-2 control-label">P14</label>
+          <label for="p14" class="col-sm-2 control-label">Arisan DYK Tahunan</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p14) }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="p15" class="col-sm-2 control-label">P15</label>
+          <label for="p15" class="col-sm-2 control-label">Mushola</label>
           <div class="col-sm-10">
             {{ toCurrency($row->p15) }}
           </div>
@@ -596,91 +596,91 @@ Data Salaries 
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p1" class="col-sm-2 control-label">P1</label>
+        <label for="p1" class="col-sm-2 control-label">Koperasi</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p1) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p2" class="col-sm-2 control-label">P2</label>
+        <label for="p2" class="col-sm-2 control-label">IKAHI</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p2) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p3" class="col-sm-2 control-label">P3</label>
+        <label for="p3" class="col-sm-2 control-label">PTWP</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p3) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p4" class="col-sm-2 control-label">P4</label>
+        <label for="p4" class="col-sm-2 control-label">YDSH</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p4) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p5" class="col-sm-2 control-label">P5</label>
+        <label for="p5" class="col-sm-2 control-label">Sumbangan Honorer</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p5) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p6" class="col-sm-2 control-label">P6</label>
+        <label for="p6" class="col-sm-2 control-label">IPASPI</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p6) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p7" class="col-sm-2 control-label">P7</label>
+        <label for="p7" class="col-sm-2 control-label">DYK</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p7) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p8" class="col-sm-2 control-label">P8</label>
+        <label for="p8" class="col-sm-2 control-label">Senam</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p8) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p9" class="col-sm-2 control-label">P9</label>
+        <label for="p9" class="col-sm-2 control-label">BRI</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p9) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p10" class="col-sm-2 control-label">P10</label>
+        <label for="p10" class="col-sm-2 control-label">BDBS</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p10) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p11" class="col-sm-2 control-label">P11</label>
+        <label for="p11" class="col-sm-2 control-label">Bank Kalbar Syariah</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p11) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p12" class="col-sm-2 control-label">P12</label>
+        <label for="p12" class="col-sm-2 control-label">Dana Sosial Hakim</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p12) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p13" class="col-sm-2 control-label">P13</label>
+        <label for="p13" class="col-sm-2 control-label">DYK Cabang</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p13) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p14" class="col-sm-2 control-label">P14</label>
+        <label for="p14" class="col-sm-2 control-label">Arisan DYK Tahunan</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p14) }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="p15" class="col-sm-2 control-label">P15</label>
+        <label for="p15" class="col-sm-2 control-label">Mushola</label>
         <div class="col-sm-10">
           {{ toCurrency($row->p15) }}
         </div>

@@ -156,7 +156,12 @@ class SalariesController extends Controller
     ]);
 
     $file = $request->file('file');
-    Excel::import(new SalaryModel($request->month_id), $file);
+    try {
+      Excel::import(new SalaryModel($request->month_id), $file);
+    } catch (\Exception $e) {
+      $message = 'File yang diunggah tidak cocok!';
+      return back()->with(['message' => $message]);
+    }
     return redirect('/salaries/data/' . $request->month_id);
   }
 

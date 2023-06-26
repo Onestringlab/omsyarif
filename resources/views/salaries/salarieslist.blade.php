@@ -15,6 +15,9 @@ Data Salaries 
   <div class="card border-success">
     <h5 class="card-header text-bg-success"> Data Gaji Dibayarkan </h5>
     <div class="card-body">
+      @if(Session::get('message') != '')
+      <div class="alert alert-danger">{{ Session::get('message') }}</div>
+      @endif
       <h5 class="card-title">{{$month->month}} {{$month->year}}</h5>
       <div class="table-responsive">
         <table class="table table-striped table-hover">

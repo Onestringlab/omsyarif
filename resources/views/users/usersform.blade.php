@@ -158,7 +158,7 @@ Data Users 
             @error('password')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-            <input class="form-control" type="text" name="password" value="">
+            <input class="form-control" type="password" name="password" value="">
             Kosongkan! Jika tidak ubah password.
           </div>
         </div>

@@ -19,7 +19,8 @@ use App\Http\Controllers\AllowancesController;
 |
 */
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => false, 'reset' => false]);
+// Auth::routes(['register' => true]);
 Route::middleware(['auth', 'checkrole:user,admin'])->group(
 	function () {
 		Route::get('/', function () {
@@ -49,6 +50,7 @@ Route::middleware(['auth', 'checkrole:admin'])->group(
 
 		Route::resource('users', UsersController::class);
 		Route::get('/users/{idusers}/delete', [UsersController::class, 'delete']);
+		Route::get('/passwordhash', [UsersController::class, 'passwordhash']);
 
 		Route::resource('months', MonthsController::class);
 		Route::get('/months/{idmonths}/delete', [MonthsController::class, 'delete']);

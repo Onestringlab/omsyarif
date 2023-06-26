@@ -60,7 +60,7 @@
     </tr>
     <tr>
       <td colspan="2">
-        <strong>Potongan-potongan</strong>
+        <strong>Potongan</strong>
       </td>
       <td></td>
       <td></td>
@@ -70,7 +70,7 @@
         1.
       </td>
       <td>
-        BRI
+        Koperasi
       </td>
       <td class="text-right">
         {{toCurrency($row->p1)}}
@@ -82,7 +82,7 @@
         2.
       </td>
       <td>
-        Zakat
+        IKAHI
       </td>
       <td class="text-right">
         {{toCurrency($row->p2)}}
@@ -94,7 +94,7 @@
         3.
       </td>
       <td>
-        Koperasi
+        PTWP
       </td>
       <td class="text-right">
         {{toCurrency($row->p3)}}
@@ -105,7 +105,7 @@
       <td class="text-right">
         4.
       </td>
-      <td></td>
+      <td>YDSH</td>
       <td class="text-right">
         {{toCurrency($row->p4)}}
       </td>
@@ -115,7 +115,7 @@
       <td class="text-right">
         5.
       </td>
-      <td></td>
+      <td>Sumbangan Honorer</td>
       <td class="text-right">
         {{toCurrency($row->p5)}}
       </td>
@@ -125,7 +125,7 @@
       <td class="text-right">
         6.
       </td>
-      <td></td>
+      <td>IPASPI</td>
       <td class="text-right">
         {{toCurrency($row->p6)}}
       </td>
@@ -135,7 +135,7 @@
       <td class="text-right">
         7.
       </td>
-      <td></td>
+      <td>DYK</td>
       <td class="text-right">
         {{toCurrency($row->p7)}}
       </td>
@@ -145,7 +145,7 @@
       <td class="text-right">
         8.
       </td>
-      <td></td>
+      <td>Senam</td>
       <td class="text-right">
         {{toCurrency($row->p8)}}
       </td>
@@ -155,7 +155,7 @@
       <td class="text-right">
         9.
       </td>
-      <td></td>
+      <td>BRI</td>
       <td class="text-right">
         {{toCurrency($row->p9)}}
       </td>
@@ -163,9 +163,9 @@
     </tr>
     <tr>
       <td class="text-right">
-        10
+        10.
       </td>
-      <td></td>
+      <td>BDBS</td>
       <td class="text-right">
         {{toCurrency($row->p10)}}
       </td>
@@ -175,7 +175,7 @@
       <td class="text-right">
         11.
       </td>
-      <td></td>
+      <td>Bank Kalbar Syariah</td>
       <td class="text-right">
         {{toCurrency($row->p11)}}
       </td>
@@ -184,7 +184,7 @@
       <td class="text-right">
         12.
       </td>
-      <td></td>
+      <td>Dana Sosial Hakim</td>
       <td class="text-right">
         {{toCurrency($row->p12)}}
       </td>
@@ -194,7 +194,7 @@
       <td class="text-right">
         13.
       </td>
-      <td></td>
+      <td>DYK Cabang</td>
       <td class="text-right">
         {{toCurrency($row->p13)}}
       </td>
@@ -204,7 +204,7 @@
       <td class="text-right" style="width:5%">
         14.
       </td>
-      <td></td>
+      <td>Arisan DYK Tahunan</td>
       <td class="text-right">
         {{toCurrency($row->p14)}}
       </td>
@@ -212,8 +212,9 @@
     </tr>
     <tr>
       <td class="text-right" style="width:5%">
+        15.
       </td>
-      <td></td>
+      <td>Mushola</td>
       <td class="text-right">
         {{toCurrency($row->p15)}}
       </td>

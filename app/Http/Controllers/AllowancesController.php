@@ -144,6 +144,7 @@ class AllowancesController extends Controller
 
   public function tunjanganlist()
   {
+
     $nip = Auth::user()->nip;
     $rows = Allowances::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
     return view('allowances/tunjanganlist', ['rows' => $rows]);
@@ -157,12 +158,19 @@ class AllowancesController extends Controller
 
   public function import(Request $request)
   {
+
     $this->validate($request, [
-      'file' => 'required|mimes:xls,xlsx',
+      'file' => 'required|file|max:204800|mimes:xlsx,xls'
     ]);
 
     $file = $request->file('file');
-    Excel::import(new AllowanceModel($request->month_id), $file);
+    try {
+      Excel::import(new AllowanceModel($request->month_id), $file);
+    } catch (\Exception $e) {
+      $message = 'File yang diunggah tidak cocok!';
+      return back()->with(['message' => $message]);
+    }
+
     return redirect('/allowances/data/' . $request->month_id);
   }
 

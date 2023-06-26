@@ -107,6 +107,7 @@ class UsersController extends Controller
     $users = Users::where('id', $id)->where('nip', Auth::user()->nip)->first();
     return view('users/passwordform', ['row' => $users]);
   }
+
   public function passwordupdate(Request $request)
   {
     $this->validate($request, [
@@ -122,5 +123,15 @@ class UsersController extends Controller
     }
     // return view('users/passwordform', ['row' => $users, 'message' => $message]);
     return redirect('/password' . '/' . $request->id)->with(['message' => $message]);
+  }
+
+  public function passwordhash()
+  {
+    $rows = Users::where('role', 'user')->get();
+    foreach ($rows as $row) {
+      $row->password = Hash::make($row->nip);;
+      $row->save();
+    }
+    dd('passwordhash');
   }
 }

@@ -5,6 +5,7 @@ namespace App\Imports;
 use App\Models\Allowances;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Maatwebsite\Excel\Concerns\WithProgressBar;
 
 
 class AllowanceModel implements ToModel, WithHeadingRow
@@ -56,8 +57,8 @@ class AllowanceModel implements ToModel, WithHeadingRow
       'potlain' => $row['potlain'],
       'pottabrum' => $row['pottabrum'],
       'bpjs' => $row['bpjs'],
-      'bpjs2' => $row['bpjs2'],
-      'totpot' => $row['potpfkbul'] + $row['potpfk2'] + $row['potpfk10'] + $row['potpph'] + $row['potswrum'] + $row['potkelbtj'] + $row['potlain'] + $row['pottabrum'] + $row['bpjs'] + $row['bpjs2'],
+      'bpjs2' => $row['bpjs2'] ?? 0,
+      'totpot' => $row['potpfkbul'] + $row['potpfk2'] + $row['potpfk10'] + $row['potpph'] + $row['potswrum'] + $row['potkelbtj'] + $row['potlain'] + $row['pottabrum'] + $row['bpjs'] + ($row['bpjs2'] ?? 0),
       'bersih' => $row['bersih'],
     ]);
   }
