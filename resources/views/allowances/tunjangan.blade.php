@@ -237,7 +237,7 @@ Slip Gaji Dibayarkan
           </div>
         </div> -->
       <div class="offset-sm-2 col-sm-9">
-        <button type="button" class="btn btn-secondary" onclick="button_cancel()">Back</button>
+        <button type="button" class="btn btn-secondary" onclick="button_cancel()">Kembali</button>
       </div>
     </div>
   </div>

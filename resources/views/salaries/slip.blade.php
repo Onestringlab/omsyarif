@@ -37,7 +37,7 @@ Slip Gaji Dibayarkan
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="name" class="col-sm-3 control-label">Name</label>
+        <label for="name" class="col-sm-3 control-label">Nama</label>
         <div class="col-sm-9">
           {{ $row->name }}
         </div>
@@ -169,7 +169,7 @@ Slip Gaji Dibayarkan
         </div>
       </div>
       <div class="offset-sm-2 col-sm-9">
-        <button type="button" class="btn btn-secondary" onclick="button_cancel()">Kembali</button>
+        <button type="button" class="btn btn-secondary" onclick="button_cancel()">Kembalie</button>
       </div>
     </div>
   </div>
