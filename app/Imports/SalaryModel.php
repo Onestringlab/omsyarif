@@ -25,7 +25,7 @@ class SalaryModel implements ToModel, WithHeadingRow
   {
     return new Salaries([
       'month_id' => $this->month_id,
-      'name' =>  $row['nmrek'],
+      'name' =>  $row['nmpeg'],
       'nip' => $row['nip'],
       'gol' => $row['gol'],
       'rekening' =>  $row['rekening'],
