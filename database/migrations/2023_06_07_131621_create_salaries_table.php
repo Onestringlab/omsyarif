@@ -13,7 +13,7 @@ return new class extends Migration
   {
     Schema::create('salaries', function (Blueprint $table) {
       $table->id();
-      $table->integer('month_id');
+      $table->unsignedBigInteger('month_id');
       $table->string('name');
       $table->string('nip')->nullable();
       $table->string('gol')->nullable();

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Months;
 use App\Models\Salaries;
-use App\Imports\SalaryArray;
 use App\Imports\SalaryModel;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;

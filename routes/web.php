@@ -7,6 +7,9 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\MonthsController;
 use App\Http\Controllers\SalariesController;
 use App\Http\Controllers\AllowancesController;
+use App\Http\Controllers\PresenceController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -78,5 +81,17 @@ Route::middleware(['auth', 'checkrole:admin'])->group(
 			Route::post('import', 'import');
 			Route::get('remove/{month_id}', 'remove');
 		});
+
+		Route::resource('presence', PresenceController::class);
+		Route::controller(PresenceController::class)->prefix('presence')->group(function () {
+			Route::get('create/{month_id}', 'create');
+			Route::get('show/{month_id}/{id}', 'show');
+			Route::get('{month_id}/{id}/edit', 'edit');
+			Route::get('{month_id}/{id}/delete', 'delete');
+			Route::get('data/{month_id}', 'data');
+			Route::post('import', 'import');
+			Route::get('remove/{month_id}', 'remove');
+		});
+		// Route::get('/presence/{idpresence}/delete', [PresenceController::class, 'delete']);
 	}
 );

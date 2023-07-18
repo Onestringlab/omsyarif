@@ -16,6 +16,7 @@ Data Months 
               <th width="60">No</th>
               <th width="120">Bersih</th>
               <th width="120">Dibayarkan</th>
+              <th width="90">Presensi</th>
               <th width="90">Bulan</th>
               <th width="90">Tahun</th>
               <!-- <th>Created_at</th> -->
@@ -30,6 +31,8 @@ Data Months 
               <td>{{ $no++ }}.</td>
               <td><a class="btn btn-warning" href="{{asset('/')}}allowances/data/{{ $row->id }}"><i class="fa-regular fa-file"></i></a></td>
               <td><a class="btn btn-success" href="{{asset('/')}}salaries/data/{{ $row->id }}"><i class="fa-regular fa-file-lines"></i></a></td>
+              <td><a class="btn btn-success" href="{{asset('/')}}presence/data/{{ $row->id }}"><i class="fa-regular fa-file-lines"></i></a></td>
+
               <td>{{ $row['month'] }}</td>
               <td>{{ $row['year'] }}</td>
               <!-- <td>{{ $row['created_at'] }}</td> -->
