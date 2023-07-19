@@ -6,6 +6,12 @@ Data Presence 
 
 @section('content')
 <div class="container">
+	<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Presensi</li>
+		</ol>
+	</nav>
 	<div class="card">
 		<h5 class="card-header text-bg-success"> Data Presensi </h5>
 		<div class="card-body">
@@ -16,11 +22,11 @@ Data Presence 
 			<div class="table-responsive">
 				<table class="table table-striped table-hover ">
 					<thead class="thead-dark">
-						<tr>
-							<th>Id</th>
+						<tr class="align-middle text-center table-primary">
+							<th width="30">No</th>
 							<!-- <th>Month_id</th> -->
-							<th>Nama</th>
-							<th>Nip</th>
+							<th width="180">NIP</th>
+							<th width="300">Nama</th>
 							<!-- <th>Jabatan</th> -->
 							<!-- <th>Vd</th>
 							<th>Tkd</th>
@@ -59,11 +65,11 @@ Data Presence 
 							<th>Cb1</th>
 							<th>Cb2</th>
 							<th>Cb3</th> -->
-							<th>Tk</th>
-							<th>Ptk</th>
-							<th>Kum</th>
-							<th>Kut</th>
-							<th>Status</th>
+							<th width="60">TK</th>
+							<th width="60">PTK</th>
+							<th width="60">KUM</th>
+							<th width="60">KUT</th>
+							<th width="120">Status</th>
 							<th>Alasan</th>
 							<!-- <th>Created_at</th>
 							<th>Updated_at</th> -->
@@ -83,8 +89,8 @@ Data Presence 
 						<tr>
 							<td>{{ $no++ }}.</td>
 							<!-- <td>{{ $row['month_id'] }}</td> -->
-							<td>{{ $row['nama'] }}</td>
 							<td>{{ $row['nip'] }}</td>
+							<td>{{ $row['nama'] }}</td>
 							<!-- <td>{{ $row['jabatan'] }}</td> -->
 							<!-- <td>{{ $row['vd'] }}</td>
 							<td>{{ $row['tkd'] }}</td>
@@ -123,16 +129,16 @@ Data Presence 
 							<td>{{ $row['cb1'] }}</td>
 							<td>{{ $row['cb2'] }}</td>
 							<td>{{ $row['cb3'] }}</td> -->
-							<td>{{ $row['tk'] }}</td>
-							<td>{{ $row['ptk'] }}</td>
-							<td>{{ $row['kum'] }}</td>
-							<td>{{ $row['kut'] }}</td>
-							<td>{{ $row['status'] }}</td>
+							<td class="text-center">{{ $row['tk'] }}</td>
+							<td class="text-center">{{ $row['ptk'] }}%</td>
+							<td class="text-center">{{ $row['kum'] }}</td>
+							<td class="text-center">{{ $row['kut'] }}</td>
+							<td class="text-center">{{ $row['status'] }}</td>
 							<td>{{ $row['alasan'] }}</td>
 							<!-- <td>{{ $row['created_at'] }}</td>
 							<td>{{ $row['updated_at'] }}</td> -->
 							<td class="text-end">
-								<a class="btn btn-success" href="{{asset('/')}}presence/show/{{ $month->id }}/{{ $row->id }}"><i class="fas fa-file-invoice"></i></i></a>
+								<a class="btn btn-success" href="{{asset('/')}}presence/show/{{ $month->id }}/{{ $row->id }}"><i class="fas fa-info-circle"></i></i></a>
 								<a class="btn btn-secondary" href="{{asset('/')}}presence/{{ $month->id }}/{{ $row->id }}/edit"><i class="far fa-edit"></i></a>
 								<a class="btn btn-danger" href="{{asset('/')}}presence/{{ $month->id }}/{{ $row->id }}/delete"><i class="far fa-trash-alt"></i></a>
 							</td>
@@ -150,7 +156,7 @@ Data Presence 
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="uploadPresenceLabel">Mengunggah File</h1>
+				<h1 class="modal-title fs-5" id="uploadPresenceLabel">Mengunggah File Presensi</h1>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
@@ -158,14 +164,14 @@ Data Presence 
 					{{ csrf_field() }}
 					<div class="mb-3 row">
 						<label for="point" class="col-sm-2 col-form-label">File</label>
-						<div class="col-sm-10">
+						<div class="col-sm-12">
 							<input class="form-control" type="file" name="file" required>
 						</div>
 					</div>
 					<div class="modal-footer">
 						<input type="hidden" name="month_id" value="{{ $month->id }}">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-						<button type="Submit" class="btn btn-primary">Unggah</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="Submit" class="btn btn-primary">Upload</button>
 					</div>
 				</form>
 			</div>
@@ -184,15 +190,15 @@ Data Presence 
 			</div>
 			<div class="modal-body">
 				<div class="mb-3 row">
-					<div class="col-sm-10">
+					<div class="col-sm-12">
 						PERINGATAN!!!<br>
 						SEMUA data presensi pada bulan ini akan DIHAPUS!!!
 					</div>
 				</div>
 				<div class="modal-footer">
 					<input type="hidden" name="month_id" value="{{ $month->id }}">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-					<a class="btn btn-danger" href="{{asset('/')}}presence/remove/{{ $month->id }}">Hapus</a>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<a class="btn btn-danger" href="{{asset('/')}}presence/remove/{{ $month->id }}">Delete</a>
 				</div>
 			</div>
 		</div>

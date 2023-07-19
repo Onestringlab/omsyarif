@@ -69,8 +69,6 @@ Route::middleware(['auth', 'checkrole:admin'])->group(
 			Route::get('remove/{month_id}', 'remove');
 		});
 
-		// Route::get('importsalaries', [SalariesController::class, 'importsalaries']);
-
 		Route::resource('allowances', AllowancesController::class);
 		Route::controller(AllowancesController::class)->prefix('allowances')->group(function () {
 			Route::get('create/{month_id}', 'create');
@@ -92,6 +90,5 @@ Route::middleware(['auth', 'checkrole:admin'])->group(
 			Route::post('import', 'import');
 			Route::get('remove/{month_id}', 'remove');
 		});
-		// Route::get('/presence/{idpresence}/delete', [PresenceController::class, 'delete']);
 	}
 );

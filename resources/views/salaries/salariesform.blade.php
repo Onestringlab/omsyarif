@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Data Salaries 
+Data Gaji Dibayarkan
 @endsection
 
 @section('content')
@@ -13,9 +13,9 @@ Data Salaries 
 <div class="container">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data Gaji</a></li>
-      <li class="breadcrumb-item"><a href="{{asset('/')}}salaries/data/{{ $month_id }}">Dibayarkan</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Slip Gaji</li>
+      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
+      <li class="breadcrumb-item"><a href="{{asset('/')}}salaries/data/{{ $month_id }}">Gaji Dibayarkan</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{$row['name']}}</li>
     </ol>
   </nav>
   <div class="card border-success">
@@ -189,8 +189,8 @@ Data Salaries 
           <div class="offset-sm-2 col-sm-10">
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="month_id" value="{{ $month_id }}">
-            <button type="submit" class="btn btn-primary">Tambah</button>
-            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
+            <button type="submit" class="btn btn-primary">Insert</button>
+            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
           </div>
         </div>
         {{ csrf_field() }}
@@ -365,8 +365,8 @@ Data Salaries 
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="id" value="{{ $row->id }}">
             <input type="hidden" name="month_id" value="{{ $month_id }}">
-            <button type="submit" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
+            <button type="submit" class="btn btn-warning">Update</button>
+            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
           </div>
         </div>
         {{ csrf_field() }}
@@ -540,8 +540,8 @@ Data Salaries 
             @method("DELETE")
             <input type="hidden" name="action" value="{{ $action }}">
             <input type="hidden" name="id" value="{{ $row->id }}">
-            <button type="submit" class="btn btn-danger">Hapus</button>
-            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Batal</button>
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
           </div>
         </div>
         {{ csrf_field() }}
@@ -711,7 +711,7 @@ Data Salaries 
       </div> -->
       <div class="mb-3 row">
         <div class="offset-sm-2 col-sm-10">
-          <button type="button" class="btn btn-secondary" onclick="button_cancel()">Kembali</button>
+          <button type="button" class="btn btn-secondary" onclick="button_cancel()">Back</button>
         </div>
       </div>
       @endif

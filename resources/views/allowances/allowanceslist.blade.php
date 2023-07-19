@@ -8,8 +8,8 @@ Data Allowances 
 <div class="container">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data Gaji</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Bersih</li>
+      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Gaji Bersih</li>
     </ol>
   </nav>
   <div class="card">
@@ -126,7 +126,7 @@ Data Allowances 
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="uploadAllowancesLabel">Mengunggah File</h1>
+        <h1 class="modal-title fs-5" id="uploadAllowancesLabel">Mengunggah File Gaji Bersih</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -134,14 +134,14 @@ Data Allowances 
           {{ csrf_field() }}
           <div class="mb-3 row">
             <label for="point" class="col-sm-2 col-form-label">File</label>
-            <div class="col-sm-10">
+            <div class="col-sm-12">
               <input class="form-control" type="file" name="file" required>
             </div>
           </div>
           <div class="modal-footer">
             <input type="hidden" name="month_id" value="{{ $month->id }}">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-            <button type="Submit" class="btn btn-primary">Unggah</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="Submit" class="btn btn-primary">Upload</button>
           </div>
         </form>
       </div>
@@ -155,20 +155,20 @@ Data Allowances 
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="removeSalariesLabel">Menghapus Data</h1>
+        <h1 class="modal-title fs-5" id="removeSalariesLabel">Menghapus Data Gaji Bersih</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="mb-3 row">
-          <div class="col-sm-10">
+          <div class="col-sm-12">
             PERINGATAN!!!<br>
-            SEMUA data pada bulan ini akan DIHAPUS!!!
+            SEMUA data gaji bersih pada bulan ini akan DIHAPUS!!!
           </div>
         </div>
         <div class="modal-footer">
           <input type="hidden" name="month_id" value="{{ $month->id }}">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-          <a class="btn btn-danger" href="{{asset('/')}}allowances/remove/{{ $month->id }}">Hapus</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a class="btn btn-danger" href="{{asset('/')}}allowances/remove/{{ $month->id }}">Delete</a>
         </div>
       </div>
 

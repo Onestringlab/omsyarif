@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Data Allowances 
+Data Gaji Bersih
 @endsection
 
 @section('content')
@@ -13,9 +13,9 @@ Data Allowances 
   </script>
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data Gaji</a></li>
-      <li class="breadcrumb-item"><a href="{{asset('/')}}allowances/data/{{ $month_id }}">bersih</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Slip Gaji</li>
+      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
+      <li class="breadcrumb-item"><a href="{{asset('/')}}allowances/data/{{ $month_id }}">Gaji Bersih</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{$row['nmpeg']}}</li>
     </ol>
   </nav>
   <div class="card border-success">

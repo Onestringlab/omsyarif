@@ -19,9 +19,9 @@ class PresenceController extends Controller
 		return view('presence/presencelist', ['rows' => $rows]);
 	}
 
-	public function create()
+	public function create($month_id)
 	{
-		return view('presence/presenceform', ['action' => 'insert']);
+		return view('presence/presenceform', ['action' => 'insert', 'month_id' => $month_id]);
 	}
 
 	public function store(Request $request)
@@ -150,17 +150,17 @@ class PresenceController extends Controller
 		return redirect('/presence/data/' . $presence->month_id);
 	}
 
-	public function delete($id)
+	public function delete($month_id, $id)
 	{
 		$presence = Presence::find($id);
-		return view('presence/presenceform', ['row' => $presence, 'action' => 'delete']);
+		return view('presence/presenceform', ['row' => $presence, 'action' => 'delete', 'month_id' => $month_id]);
 	}
 
 	public function destroy($id)
 	{
 		$presence = Presence::find($id);
 		$presence->delete();
-		return redirect('/presence');
+		return redirect('/presence/data/' . $presence->month_id);
 	}
 
 	public function data($month_id)
@@ -177,13 +177,12 @@ class PresenceController extends Controller
 		]);
 
 		$file = $request->file('file');
-		Excel::import(new PresencesImport($request->month_id), $file);
-		// try {
-		// 	Excel::import(new PresencesImport($request->month_id), $file);
-		// } catch (\Exception $e) {
-		// 	$message = 'File yang diunggah tidak cocok!';
-		// 	return back()->with(['message' => $message]);
-		// }
+		try {
+			Excel::import(new PresencesImport($request->month_id), $file);
+		} catch (\Exception $e) {
+			$message = 'File yang diunggah tidak cocok!';
+			return back()->with(['message' => $message]);
+		}
 		return redirect('/presence/data/' . $request->month_id);
 	}
 

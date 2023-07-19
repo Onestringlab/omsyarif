@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Data Presence 
+Data Presensi
 @endsection
 
 @section('content')
@@ -11,35 +11,43 @@ Data Presence 
 			location.replace("{{ asset('/') }}presence/data/{{ $month_id }}");
 		}
 	</script>
-	<div class="card">
-		<h5 class="card-header"> Data Presence</h5>
+	<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
+			<li class="breadcrumb-item"><a href="{{asset('/')}}presence/data/{{ $month_id }}">Presensi</a></li>
+			<li class="breadcrumb-item active" aria-current="page">{{ucfirst($action)}}</li>
+		</ol>
+	</nav>
+	<div class="card border-success">
+		<h5 class="card-header text-bg-success"> Data Presensi</h5>
 		<div class="card-body">
 			@if($action == 'insert')
 			<form class="form-horizontal" action="{{ asset('/') }}presence" method="post">
-				{{-- <div class="mb-3 row">
+				<!-- <div class="mb-3 row">
 					<label for="id" class="col-sm-2 col-form-label">Id</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="id" value="">
 					</div>
-				</div> --}}
-				{{-- <div class="mb-3 row">
+				</div> -->
+				<!-- <div class="mb-3 row">
 					<label for="month_id" class="col-sm-2 col-form-label">Month_id</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="month_id" value="">
 					</div>
-				</div> --}}
+				</div> -->
+				<div class="mb-3 row">
+					<label for="nip" class="col-sm-2 col-form-label">NIP</label>
+					<div class="col-sm-10">
+						<input class="form-control" type="text" name="nip" value="">
+					</div>
+				</div>
 				<div class="mb-3 row">
 					<label for="nama" class="col-sm-2 col-form-label">Nama</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="nama" value="">
 					</div>
 				</div>
-				<div class="mb-3 row">
-					<label for="nip" class="col-sm-2 col-form-label">Nip</label>
-					<div class="col-sm-10">
-						<input class="form-control" type="text" name="nip" value="">
-					</div>
-				</div>
+
 				<div class="mb-3 row">
 					<label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
 					<div class="col-sm-10">
@@ -292,30 +300,33 @@ Data Presence 
 						<input class="form-control" type="text" name="kut" value="">
 					</div>
 				</div>
-				{{-- <div class="mb-3 row">
+				<div class="mb-3 row">
 					<label for="status" class="col-sm-2 col-form-label">Status</label>
 					<div class="col-sm-10">
-						<input class="form-control" type="text" name="status" value="">
+						<select class="form-control" type="text" name="status">
+							<option value="Setuju">Setuju</option>
+							<option value="Tidak Setuju">Tidak Setuju</option>
+						</select>
 					</div>
-				</div> --}}
-				{{-- <div class="mb-3 row">
+				</div>
+				<div class="mb-3 row">
 					<label for="alasan" class="col-sm-2 col-form-label">Alasan</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="alasan" value="">
 					</div>
-				</div> --}}
-				{{-- <div class="mb-3 row">
+				</div>
+				<!-- <div class="mb-3 row">
 					<label for="created_at" class="col-sm-2 col-form-label">Created_at</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="created_at" value="">
 					</div>
-				</div> --}}
-				{{-- <div class="mb-3 row">
+				</div> -->
+				<!-- <div class="mb-3 row">
 					<label for="updated_at" class="col-sm-2 col-form-label">Updated_at</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="updated_at" value="">
 					</div>
-				</div> --}}
+				</div> -->
 				<div class="mb-3">
 					<div class="offset-sm-2 col-sm-10">
 						<input type="hidden" name="action" value="{{ $action }}">
@@ -328,28 +339,28 @@ Data Presence 
 			</form>
 			@elseif($action == 'update')
 			<form class="form-horizontal" action="{{ asset('/') }}presence/{{ $row->id }}" method="post">
-				<div class="mb-3 row">
+				<!-- <div class="mb-3 row">
 					<label for="id" class="col-sm-2 col-form-label">Id</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="id" value="{{ $row->id }}">
 					</div>
-				</div>
-				<div class="mb-3 row">
+				</div> -->
+				<!-- <div class="mb-3 row">
 					<label for="month_id" class="col-sm-2 col-form-label">Month_id</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="month_id" value="{{ $row->month_id }}">
+					</div>
+				</div> -->
+				<div class="mb-3 row">
+					<label for="nip" class="col-sm-2 col-form-label">NIP</label>
+					<div class="col-sm-10">
+						<input class="form-control" type="text" name="nip" value="{{ $row->nip }}">
 					</div>
 				</div>
 				<div class="mb-3 row">
 					<label for="nama" class="col-sm-2 col-form-label">Nama</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="nama" value="{{ $row->nama }}">
-					</div>
-				</div>
-				<div class="mb-3 row">
-					<label for="nip" class="col-sm-2 col-form-label">Nip</label>
-					<div class="col-sm-10">
-						<input class="form-control" type="text" name="nip" value="{{ $row->nip }}">
 					</div>
 				</div>
 				<div class="mb-3 row">
@@ -607,7 +618,10 @@ Data Presence 
 				<div class="mb-3 row">
 					<label for="status" class="col-sm-2 col-form-label">Status</label>
 					<div class="col-sm-10">
-						<input class="form-control" type="text" name="status" value="{{ $row->status }}">
+						<select class="form-control" type="text" name="status">
+							<option value="Setuju" {{ $row->status === "Setuju" ? "selected" : ""}}>Setuju</option>
+							<option value="Tidak Setuju" {{ $row->status === "Tidak Setuju" ? "selected" : ""}}>Tidak Setuju</option>
+						</select>
 					</div>
 				</div>
 				<div class="mb-3 row">
@@ -616,18 +630,18 @@ Data Presence 
 						<input class="form-control" type="text" name="alasan" value="{{ $row->alasan }}">
 					</div>
 				</div>
-				<div class="mb-3 row">
+				<!-- <div class="mb-3 row">
 					<label for="created_at" class="col-sm-2 col-form-label">Created_at</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="created_at" value="{{ $row->created_at }}">
 					</div>
-				</div>
-				<div class="mb-3 row">
+				</div> -->
+				<!-- <div class="mb-3 row">
 					<label for="updated_at" class="col-sm-2 col-form-label">Updated_at</label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="updated_at" value="{{ $row->updated_at }}">
 					</div>
-				</div>
+				</div> -->
 				<div class="mb-3 row">
 					<div class="offset-sm-2 col-sm-10">
 						@method("PATCH")
@@ -642,28 +656,28 @@ Data Presence 
 			</form>
 			@elseif($action == 'delete')
 			<form class="form-horizontal" action="{{ asset('/') }}presence/{{ $row->id }}" method="post">
-				<div class="mb-3 row">
+				<!-- <div class="mb-3 row">
 					<label for="id" class="col-sm-2 control-label">Id</label>
 					<div class="col-sm-10">
 						{{ $row->id }}
 					</div>
-				</div>
-				<div class="mb-3 row">
+				</div> -->
+				<!-- <div class="mb-3 row">
 					<label for="month_id" class="col-sm-2 control-label">Month_id</label>
 					<div class="col-sm-10">
 						{{ $row->month_id }}
+					</div>
+				</div> -->
+				<div class="mb-3 row">
+					<label for="nip" class="col-sm-2 control-label">NIP</label>
+					<div class="col-sm-10">
+						{{ $row->nip }}
 					</div>
 				</div>
 				<div class="mb-3 row">
 					<label for="nama" class="col-sm-2 control-label">Nama</label>
 					<div class="col-sm-10">
 						{{ $row->nama }}
-					</div>
-				</div>
-				<div class="mb-3 row">
-					<label for="nip" class="col-sm-2 control-label">Nip</label>
-					<div class="col-sm-10">
-						{{ $row->nip }}
 					</div>
 				</div>
 				<div class="mb-3 row">
@@ -930,23 +944,24 @@ Data Presence 
 						{{ $row->alasan }}
 					</div>
 				</div>
-				<div class="mb-3 row">
+				<!-- <div class="mb-3 row">
 					<label for="created_at" class="col-sm-2 control-label">Created_at</label>
 					<div class="col-sm-10">
 						{{ $row->created_at }}
 					</div>
-				</div>
-				<div class="mb-3 row">
+				</div> -->
+				<!-- <div class="mb-3 row">
 					<label for="updated_at" class="col-sm-2 control-label">Updated_at</label>
 					<div class="col-sm-10">
 						{{ $row->updated_at }}
 					</div>
-				</div>
+				</div> -->
 				<div class="mb-3 row">
 					<div class="offset-sm-2 col-sm-10">
 						@method("DELETE")
 						<input type="hidden" name="action" value="{{ $action }}">
 						<input type="hidden" name="id" value="{{ $row->id }}">
+						<input type="hidden" name="month_id" value="{{ $month_id }}">
 						<button type="submit" class="btn btn-danger">Delete</button>
 						<button type="button" class="btn btn-secondary" onclick="button_cancel()">Cancel</button>
 					</div>
@@ -954,28 +969,28 @@ Data Presence 
 				{{ csrf_field() }}
 			</form>
 			@elseif($action == 'detail')
-			<div class="mb-3 row">
+			<!-- <div class="mb-3 row">
 				<label for="id" class="col-sm-2 control-label">Id</label>
 				<div class="col-sm-10">
 					{{ $row->id }}
 				</div>
-			</div>
-			<div class="mb-3 row">
+			</div> -->
+			<!-- <div class="mb-3 row">
 				<label for="month_id" class="col-sm-2 control-label">Month_id</label>
 				<div class="col-sm-10">
 					{{ $row->month_id }}
+				</div>
+			</div> -->
+			<div class="mb-3 row">
+				<label for="nip" class="col-sm-2 control-label">NIP</label>
+				<div class="col-sm-10">
+					{{ $row->nip }}
 				</div>
 			</div>
 			<div class="mb-3 row">
 				<label for="nama" class="col-sm-2 control-label">Nama</label>
 				<div class="col-sm-10">
 					{{ $row->nama }}
-				</div>
-			</div>
-			<div class="mb-3 row">
-				<label for="nip" class="col-sm-2 control-label">Nip</label>
-				<div class="col-sm-10">
-					{{ $row->nip }}
 				</div>
 			</div>
 			<div class="mb-3 row">
@@ -1242,18 +1257,18 @@ Data Presence 
 					{{ $row->alasan }}
 				</div>
 			</div>
-			<div class="mb-3 row">
+			<!-- <div class="mb-3 row">
 				<label for="created_at" class="col-sm-2 control-label">Created_at</label>
 				<div class="col-sm-10">
 					{{ $row->created_at }}
 				</div>
-			</div>
-			<div class="mb-3 row">
+			</div> -->
+			<!-- <div class="mb-3 row">
 				<label for="updated_at" class="col-sm-2 control-label">Updated_at</label>
 				<div class="col-sm-10">
 					{{ $row->updated_at }}
 				</div>
-			</div>
+			</div> -->
 			<div class="mb-3 row">
 				<div class="offset-sm-2 col-sm-10">
 					<button type="button" class="btn btn-secondary" onclick="button_cancel()">Back</button>
