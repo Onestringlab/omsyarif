@@ -15,7 +15,7 @@ Data Presensi
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
 			<li class="breadcrumb-item"><a href="{{asset('/')}}presence/data/{{ $month_id }}">Presensi</a></li>
-			<li class="breadcrumb-item active" aria-current="page">{{ucfirst($action)}}</li>
+			<li class="breadcrumb-item active" aria-current="page">{{ ucfirst($action) }}</li>
 		</ol>
 	</nav>
 	<div class="card border-success">

@@ -15,7 +15,7 @@ Data Gaji Bersih
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
       <li class="breadcrumb-item"><a href="{{asset('/')}}allowances/data/{{ $month_id }}">Gaji Bersih</a></li>
-      <li class="breadcrumb-item active" aria-current="page">{{$row['nmpeg']}}</li>
+      <li class="breadcrumb-item active" aria-current="page">{{ ucfirst($action) }}</li>
     </ol>
   </nav>
   <div class="card border-success">

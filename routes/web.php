@@ -8,8 +8,7 @@ use App\Http\Controllers\MonthsController;
 use App\Http\Controllers\SalariesController;
 use App\Http\Controllers\AllowancesController;
 use App\Http\Controllers\PresenceController;
-
-
+use App\Http\Controllers\GrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +42,13 @@ Route::middleware(['auth', 'checkrole:user,admin'])->group(
 			Route::get('/tunjanganlist', 'tunjanganlist')->name('tunjanganlist');
 			Route::get('/tunjangan/{id}', 'tunjangan')->name('tunjangan');
 			Route::get('/tunjanganpdf/{id}', 'tunjanganpdf')->name('tunjanganpdf');
+		});
+
+		Route::controller(PresenceController::class)->group(function () {
+			Route::get('/absensilist', 'absensilist')->name('absensilist');
+			Route::get('/absensi/{id}', 'absensi')->name('absensi');
+			Route::get('/absensiform/{id}', 'absensiform')->name('absensiform');
+			Route::post('/absensiedit', 'absensiedit')->name('absensiedit');
 		});
 	}
 );
@@ -82,6 +88,17 @@ Route::middleware(['auth', 'checkrole:admin'])->group(
 
 		Route::resource('presence', PresenceController::class);
 		Route::controller(PresenceController::class)->prefix('presence')->group(function () {
+			Route::get('create/{month_id}', 'create');
+			Route::get('show/{month_id}/{id}', 'show');
+			Route::get('{month_id}/{id}/edit', 'edit');
+			Route::get('{month_id}/{id}/delete', 'delete');
+			Route::get('data/{month_id}', 'data');
+			Route::post('import', 'import');
+			Route::get('remove/{month_id}', 'remove');
+		});
+
+		Route::resource('grand', GrandController::class);
+		Route::controller(GrandController::class)->prefix('grand')->group(function () {
 			Route::get('create/{month_id}', 'create');
 			Route::get('show/{month_id}/{id}', 'show');
 			Route::get('{month_id}/{id}/edit', 'edit');

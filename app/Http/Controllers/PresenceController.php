@@ -6,8 +6,7 @@ use App\Models\Months;
 use App\Models\Presence;
 use App\Imports\PresencesImport;
 use Illuminate\Http\Request;
-
-
+use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 
 class PresenceController extends Controller
@@ -190,5 +189,35 @@ class PresenceController extends Controller
 	{
 		Presence::where('month_id', '=', $month_id)->delete();
 		return redirect('/presence/data/' . $month_id);
+	}
+
+	// user side 
+	public function absensilist()
+	{
+
+		$nip = Auth::user()->nip;
+		$rows = Presence::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
+		return view('presence/absensilist', ['rows' => $rows]);
+	}
+
+	public function absensi($id)
+	{
+		$row = Presence::where("id", $id)->where('nip', Auth::user()->nip)->first();
+		return view('presence/absensi', ['row' => $row]);
+	}
+
+	public function absensiform($id)
+	{
+		$row = Presence::where("id", $id)->where('nip', Auth::user()->nip)->first();
+		return view('presence/absensiform', ['row' => $row]);
+	}
+
+	public function absensiedit(Request $request)
+	{
+		$presence = Presence::find($request->id);
+		$presence->status = $request->status;
+		$presence->alasan = $request->alasan;
+		$presence->save();
+		return redirect('/absensilist');
 	}
 }

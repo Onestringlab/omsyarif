@@ -122,7 +122,7 @@ class SalariesController extends Controller
 
   public function data($month_id)
   {
-    $rows = Salaries::where('month_id', $month_id)->orderBy('name', 'ASC')->get();
+    $rows = Salaries::where('month_id', $month_id)->orderBy('name', 'DESC')->get();
     $month = Months::where('id', $month_id)->first();
     return view('salaries/salarieslist', ['rows' => $rows, 'month' => $month]);
   }

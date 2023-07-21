@@ -15,7 +15,7 @@ Data Gaji Dibayarkan
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
       <li class="breadcrumb-item"><a href="{{asset('/')}}salaries/data/{{ $month_id }}">Gaji Dibayarkan</a></li>
-      <li class="breadcrumb-item active" aria-current="page">{{$row['name']}}</li>
+      <li class="breadcrumb-item active" aria-current="page">{{ ucfirst($action) }}</li>
     </ol>
   </nav>
   <div class="card border-success">
