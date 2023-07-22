@@ -6,6 +6,12 @@ Data Grand 
 
 @section('content')
 <div class="container">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ asset('/months') }}">Data</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Tunjangan Kinerja</li>
+    </ol>
+  </nav>
   <div class="card">
     <h5 class="card-header text-bg-success"> Data Tunjangan Kinerja</h5>
     <div class="card-body">
@@ -16,7 +22,7 @@ Data Grand 
               <th width="30" class="text-center">No</th>
               <!-- <th>Month_id</th> -->
               <th width="180" class="text-center">NIP</th>
-              <th width="300" class="text-center">Nama</th>
+              <th width="250" class="text-center">Nama</th>
               <!-- <th>Npwp</th> -->
               <!-- <th>Panggol</th> -->
               <!-- <th>Jabatan</th> -->
@@ -26,7 +32,7 @@ Data Grand 
               <!-- <th>Potabs</th> -->
               <!-- <th>Potkim</th> -->
               <!-- <th>Jumlahpot</th> -->
-              <th width="150">Tunjangan Setelah Potongan</th>
+              <th width="150" class="text-center">Tunjangan Setelah Potongan</th>
               <!-- <th>Tunjpph</th> -->
               <!-- <th>Bruto</th> -->
               <!-- <th>Potpph</th> -->
@@ -62,7 +68,7 @@ Data Grand 
               <!-- <td>{{ $row['potabs'] }}</td> -->
               <!-- <td>{{ $row['potkim'] }}</td> -->
               <!-- <td>{{ $row['jumlahpot'] }}</td> -->
-              <td>{{ $row['jumtunjsetpot'] }}</td>
+              <td class="text-end">{{ $row['jumtunjsetpot'] }}</td>
               <!-- <td>{{ $row['tunjpph'] }}</td> -->
               <!-- <td>{{ $row['bruto'] }}</td> -->
               <!-- <td>{{ $row['potpph'] }}</td> -->
