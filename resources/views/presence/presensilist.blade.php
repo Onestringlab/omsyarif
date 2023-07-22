@@ -18,13 +18,13 @@ Presensi
           <thead class="thead-dark">
             <tr class="align-middle text-center table-primary">
               <th width="40">No</th>
-              <th width="120">Bulan</th>
-              <th>TK</th>
-              <th>PTK</th>
-              <th>KUM</th>
-              <th>KUT</th>
+              <th>Bulan</th>
+              <th>Kehadiran</th>
+              <!-- <th width="140">PENGURANGAN TUNJANGAN KINERJA</th> -->
+              <!-- <th width="140">KEHADIRAN UNTUK UANG MAKAN</th> -->
+              <!-- <th width="140">KEHADIRAN UNTUK UANG TRANSPORT</th> -->
               <th width="120">Status</th>
-              <th>Alasan</th>
+              <!-- <th>Alasan</th> -->
               <th width="120"></th>
             </tr>
           </thead>
@@ -32,14 +32,14 @@ Presensi
             @php ($no = 1)
             @foreach ($rows as $row)
             <tr>
-              <td>{{ $no++ }}.</td>
+              <td class="text-center">{{ $no++ }}.</td>
               <td class="text-center">{{ $row->months->month }} {{ $row->months->year }}</td>
               <td class="text-center">{{ $row['tk'] }}</td>
-              <td class="text-center">{{ $row['ptk'] }}%</td>
-              <td class="text-center">{{ $row['kum'] }}</td>
-              <td class="text-center">{{ $row['kut'] }}</td>
+              <!-- <td class="text-center">{{ $row['ptk'] }}%</td> -->
+              <!-- <td class="text-center">{{ $row['kum'] }}</td> -->
+              <!-- <td class="text-center">{{ $row['kut'] }}</td> -->
               <td class="text-center">{{ $row['status'] }}</td>
-              <td>{{ $row['alasan'] }}</td>
+              <!-- <td>{{ $row['alasan'] }}</td> -->
               <td>
                 <a class="btn text-light btn-info" href="{{asset('/')}}presensi/{{ $row->id }}">
                   <i class="fa-solid fa-calendar-check"></i>

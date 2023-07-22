@@ -129,3 +129,8 @@ function toCurrency($amount, $currency = '', $fractionDigits = 0)
   $format = $currency . number_format($amount, $fractionDigits, ',', '.');
   return $format;
 }
+
+function toFWU($string)
+{
+  return ucwords((strtolower($string)));
+}

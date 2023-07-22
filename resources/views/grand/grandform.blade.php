@@ -23,115 +23,115 @@ Data Grand 
         @if($action == 'insert')
         <form class="form-horizontal" action="{{ asset('/') }}grand" method="post">
           <!-- <div class="mb-3 row">
-          <label for="id" class="col-sm-2 col-form-label">Id</label>
+          <label for="id" class="col-sm-2 col-form-label"><strong>Id</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="id" value="">
           </div>
         </div> -->
           <!-- <div class="mb-3 row">
-          <label for="month_id" class="col-sm-2 col-form-label">Month_id</label>
+          <label for="month_id" class="col-sm-2 col-form-label"><strong>Month_id</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="month_id" value="">
           </div>
         </div> -->
           <div class="mb-3 row">
-            <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+            <label for="nama" class="col-sm-2 col-form-label"><strong>Nama</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="nama" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="nip" class="col-sm-2 col-form-label">Nip</label>
+            <label for="nip" class="col-sm-2 col-form-label"><strong>Nip</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="nip" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="npwp" class="col-sm-2 col-form-label">Npwp</label>
+            <label for="npwp" class="col-sm-2 col-form-label"><strong>Npwp</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="npwp" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="panggol" class="col-sm-2 col-form-label">Panggol</label>
+            <label for="panggol" class="col-sm-2 col-form-label"><strong>Panggol</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="panggol" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+            <label for="jabatan" class="col-sm-2 col-form-label"><strong>Jabatan</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="jabatan" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="grad" class="col-sm-2 col-form-label">Grad</label>
+            <label for="grad" class="col-sm-2 col-form-label"><strong>Grad</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="grad" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="maxmedmin" class="col-sm-2 col-form-label">Maxmedmin</label>
+            <label for="maxmedmin" class="col-sm-2 col-form-label"><strong>Maxmedmin</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="maxmedmin" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="tunjangan" class="col-sm-2 col-form-label">Tunjangan</label>
+            <label for="tunjangan" class="col-sm-2 col-form-label"><strong>Tunjangan</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="tunjangan" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potabs" class="col-sm-2 col-form-label">Potabs</label>
+            <label for="potabs" class="col-sm-2 col-form-label"><strong>Potabs</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="potabs" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potkim" class="col-sm-2 col-form-label">Potkim</label>
+            <label for="potkim" class="col-sm-2 col-form-label"><strong>Potkim</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="potkim" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jumlahpot" class="col-sm-2 col-form-label">Jumlahpot</label>
+            <label for="jumlahpot" class="col-sm-2 col-form-label"><strong>Jumlahpot</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="jumlahpot" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jumtunjsetpot" class="col-sm-2 col-form-label">Jumtunjsetpot</label>
+            <label for="jumtunjsetpot" class="col-sm-2 col-form-label"><strong>Jumtunjsetpot</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="jumtunjsetpot" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="tunjpph" class="col-sm-2 col-form-label">Tunjpph</label>
+            <label for="tunjpph" class="col-sm-2 col-form-label"><strong>Tunjpph</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="tunjpph" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="bruto" class="col-sm-2 col-form-label">Bruto</label>
+            <label for="bruto" class="col-sm-2 col-form-label"><strong>Bruto</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="bruto" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potpph" class="col-sm-2 col-form-label">Potpph</label>
+            <label for="potpph" class="col-sm-2 col-form-label"><strong>Potpph</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="potpph" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="netto" class="col-sm-2 col-form-label">Netto</label>
+            <label for="netto" class="col-sm-2 col-form-label"><strong>Netto</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="netto" value="">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="status" class="col-sm-2 col-form-label">Status</label>
+            <label for="status" class="col-sm-2 col-form-label"><strong>Status</strong></label>
             <div class="col-sm-10">
               <select class="form-control" type="text" name="status">
                 <option value="Setuju">Setuju</option>
@@ -140,19 +140,19 @@ Data Grand 
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="alasan" class="col-sm-2 col-form-label">Alasan</label>
+            <label for="alasan" class="col-sm-2 col-form-label"><strong>Alasan</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="alasan" value="">
             </div>
           </div>
           <!-- <div class="mb-3 row">
-          <label for="created_at" class="col-sm-2 col-form-label">Created_at</label>
+          <label for="created_at" class="col-sm-2 col-form-label"><strong>Created_at</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="created_at" value="">
           </div>
         </div> -->
           <!-- <div class="mb-3 row">
-          <label for="updated_at" class="col-sm-2 col-form-label">Updated_at</label>
+          <label for="updated_at" class="col-sm-2 col-form-label"><strong>Updated_at</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="updated_at" value="">
           </div>
@@ -170,115 +170,115 @@ Data Grand 
         @elseif($action == 'update')
         <form class="form-horizontal" action="{{ asset('/') }}grand/{{ $row->id }}" method="post">
           <!-- <div class="mb-3 row">
-          <label for="id" class="col-sm-2 col-form-label">Id</label>
+          <label for="id" class="col-sm-2 col-form-label"><strong>Id</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="id" value="{{ $row->id }}">
           </div>
         </div> -->
           <!-- <div class="mb-3 row">
-          <label for="month_id" class="col-sm-2 col-form-label">Month_id</label>
+          <label for="month_id" class="col-sm-2 col-form-label"><strong>Month_id</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="month_id" value="{{ $row->month_id }}">
           </div>
         </div> -->
           <div class="mb-3 row">
-            <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+            <label for="nama" class="col-sm-2 col-form-label"><strong>Nama</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="nama" value="{{ $row->nama }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="nip" class="col-sm-2 col-form-label">Nip</label>
+            <label for="nip" class="col-sm-2 col-form-label"><strong>Nip</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="nip" value="{{ $row->nip }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="npwp" class="col-sm-2 col-form-label">Npwp</label>
+            <label for="npwp" class="col-sm-2 col-form-label"><strong>Npwp</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="npwp" value="{{ $row->npwp }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="panggol" class="col-sm-2 col-form-label">Panggol</label>
+            <label for="panggol" class="col-sm-2 col-form-label"><strong>Panggol</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="panggol" value="{{ $row->panggol }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+            <label for="jabatan" class="col-sm-2 col-form-label"><strong>Jabatan</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="jabatan" value="{{ $row->jabatan }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="grad" class="col-sm-2 col-form-label">Grad</label>
+            <label for="grad" class="col-sm-2 col-form-label"><strong>Grad</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="grad" value="{{ $row->grad }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="maxmedmin" class="col-sm-2 col-form-label">Maxmedmin</label>
+            <label for="maxmedmin" class="col-sm-2 col-form-label"><strong>Maxmedmin</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="maxmedmin" value="{{ $row->maxmedmin }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="tunjangan" class="col-sm-2 col-form-label">Tunjangan</label>
+            <label for="tunjangan" class="col-sm-2 col-form-label"><strong>Tunjangan</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="tunjangan" value="{{ $row->tunjangan }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potabs" class="col-sm-2 col-form-label">Potabs</label>
+            <label for="potabs" class="col-sm-2 col-form-label"><strong>Potabs</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="potabs" value="{{ $row->potabs }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potkim" class="col-sm-2 col-form-label">Potkim</label>
+            <label for="potkim" class="col-sm-2 col-form-label"><strong>Potkim</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="potkim" value="{{ $row->potkim }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jumlahpot" class="col-sm-2 col-form-label">Jumlahpot</label>
+            <label for="jumlahpot" class="col-sm-2 col-form-label"><strong>Jumlahpot</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="jumlahpot" value="{{ $row->jumlahpot }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jumtunjsetpot" class="col-sm-2 col-form-label">Jumtunjsetpot</label>
+            <label for="jumtunjsetpot" class="col-sm-2 col-form-label"><strong>Jumtunjsetpot</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="jumtunjsetpot" value="{{ $row->jumtunjsetpot }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="tunjpph" class="col-sm-2 col-form-label">Tunjpph</label>
+            <label for="tunjpph" class="col-sm-2 col-form-label"><strong>Tunjpph</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="tunjpph" value="{{ $row->tunjpph }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="bruto" class="col-sm-2 col-form-label">Bruto</label>
+            <label for="bruto" class="col-sm-2 col-form-label"><strong>Bruto</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="bruto" value="{{ $row->bruto }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potpph" class="col-sm-2 col-form-label">Potpph</label>
+            <label for="potpph" class="col-sm-2 col-form-label"><strong>Potpph</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="potpph" value="{{ $row->potpph }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="netto" class="col-sm-2 col-form-label">Netto</label>
+            <label for="netto" class="col-sm-2 col-form-label"><strong>Netto</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="netto" value="{{ $row->netto }}">
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="status" class="col-sm-2 col-form-label">Status</label>
+            <label for="status" class="col-sm-2 col-form-label"><strong>Status</strong></label>
             <div class="col-sm-10">
               <select class="form-control" type="text" name="status">
                 <option value="Setuju" {{ $row->status === "Setuju" ? "selected" : ""}}>Setuju</option>
@@ -287,19 +287,19 @@ Data Grand 
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="alasan" class="col-sm-2 col-form-label">Alasan</label>
+            <label for="alasan" class="col-sm-2 col-form-label"><strong>Alasan</strong></label>
             <div class="col-sm-10">
               <input class="form-control" type="text" name="alasan" value="{{ $row->alasan }}">
             </div>
           </div>
           <!-- <div class="mb-3 row">
-          <label for="created_at" class="col-sm-2 col-form-label">Created_at</label>
+          <label for="created_at" class="col-sm-2 col-form-label"><strong>Created_at</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="created_at" value="{{ $row->created_at }}">
           </div>
         </div> -->
           <!-- <div class="mb-3 row">
-          <label for="updated_at" class="col-sm-2 col-form-label">Updated_at</label>
+          <label for="updated_at" class="col-sm-2 col-form-label"><strong>Updated_at</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="updated_at" value="{{ $row->updated_at }}">
           </div>
@@ -319,133 +319,133 @@ Data Grand 
         @elseif($action == 'delete')
         <form class="form-horizontal" action="{{ asset('/') }}grand/{{ $row->id }}" method="post">
           <!-- <div class="mb-3 row">
-          <label for="id" class="col-sm-2 control-label">Id</label>
+          <label for="id" class="col-sm-2 control-label"><strong>Id</strong></label>
           <div class="col-sm-10">
             {{ $row->id }}
           </div>
         </div> -->
           <!-- <div class="mb-3 row">
-          <label for="month_id" class="col-sm-2 control-label">Month_id</label>
+          <label for="month_id" class="col-sm-2 control-label"><strong>Month_id</strong></label>
           <div class="col-sm-10">
             {{ $row->month_id }}
           </div>
         </div> -->
           <div class="mb-3 row">
-            <label for="nama" class="col-sm-2 control-label">Nama</label>
+            <label for="nama" class="col-sm-2 control-label"><strong>Nama</strong></label>
             <div class="col-sm-10">
               {{ $row->nama }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="nip" class="col-sm-2 control-label">Nip</label>
+            <label for="nip" class="col-sm-2 control-label"><strong>Nip</strong></label>
             <div class="col-sm-10">
               {{ $row->nip }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="npwp" class="col-sm-2 control-label">Npwp</label>
+            <label for="npwp" class="col-sm-2 control-label"><strong>Npwp</strong></label>
             <div class="col-sm-10">
               {{ $row->npwp }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="panggol" class="col-sm-2 control-label">Panggol</label>
+            <label for="panggol" class="col-sm-2 control-label"><strong>Panggol</strong></label>
             <div class="col-sm-10">
               {{ $row->panggol }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jabatan" class="col-sm-2 control-label">Jabatan</label>
+            <label for="jabatan" class="col-sm-2 control-label"><strong>Jabatan</strong></label>
             <div class="col-sm-10">
               {{ $row->jabatan }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="grad" class="col-sm-2 control-label">Grad</label>
+            <label for="grad" class="col-sm-2 control-label"><strong>Grad</strong></label>
             <div class="col-sm-10">
               {{ $row->grad }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="maxmedmin" class="col-sm-2 control-label">Maxmedmin</label>
+            <label for="maxmedmin" class="col-sm-2 control-label"><strong>Maxmedmin</strong></label>
             <div class="col-sm-10">
               {{ $row->maxmedmin }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="tunjangan" class="col-sm-2 control-label">Tunjangan</label>
+            <label for="tunjangan" class="col-sm-2 control-label"><strong>Tunjangan</strong></label>
             <div class="col-sm-10">
               {{ $row->tunjangan }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potabs" class="col-sm-2 control-label">Potabs</label>
+            <label for="potabs" class="col-sm-2 control-label"><strong>Potabs</strong></label>
             <div class="col-sm-10">
               {{ $row->potabs }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potkim" class="col-sm-2 control-label">Potkim</label>
+            <label for="potkim" class="col-sm-2 control-label"><strong>Potkim</strong></label>
             <div class="col-sm-10">
               {{ $row->potkim }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jumlahpot" class="col-sm-2 control-label">Jumlahpot</label>
+            <label for="jumlahpot" class="col-sm-2 control-label"><strong>Jumlahpot</strong></label>
             <div class="col-sm-10">
               {{ $row->jumlahpot }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="jumtunjsetpot" class="col-sm-2 control-label">Jumtunjsetpot</label>
+            <label for="jumtunjsetpot" class="col-sm-2 control-label"><strong>Jumtunjsetpot</strong></label>
             <div class="col-sm-10">
               {{ $row->jumtunjsetpot }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="tunjpph" class="col-sm-2 control-label">Tunjpph</label>
+            <label for="tunjpph" class="col-sm-2 control-label"><strong>Tunjpph</strong></label>
             <div class="col-sm-10">
               {{ $row->tunjpph }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="bruto" class="col-sm-2 control-label">Bruto</label>
+            <label for="bruto" class="col-sm-2 control-label"><strong>Bruto</strong></label>
             <div class="col-sm-10">
               {{ $row->bruto }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="potpph" class="col-sm-2 control-label">Potpph</label>
+            <label for="potpph" class="col-sm-2 control-label"><strong>Potpph</strong></label>
             <div class="col-sm-10">
               {{ $row->potpph }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="netto" class="col-sm-2 control-label">Netto</label>
+            <label for="netto" class="col-sm-2 control-label"><strong>Netto</strong></label>
             <div class="col-sm-10">
               {{ $row->netto }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="status" class="col-sm-2 control-label">Status</label>
+            <label for="status" class="col-sm-2 control-label"><strong>Status</strong></label>
             <div class="col-sm-10">
               {{ $row->status }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="alasan" class="col-sm-2 control-label">Alasan</label>
+            <label for="alasan" class="col-sm-2 control-label"><strong>Alasan</strong></label>
             <div class="col-sm-10">
               {{ $row->alasan }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="created_at" class="col-sm-2 control-label">Created_at</label>
+            <label for="created_at" class="col-sm-2 control-label"><strong>Created_at</strong></label>
             <div class="col-sm-10">
               {{ $row->created_at }}
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="updated_at" class="col-sm-2 control-label">Updated_at</label>
+            <label for="updated_at" class="col-sm-2 control-label"><strong>Updated_at</strong></label>
             <div class="col-sm-10">
               {{ $row->updated_at }}
             </div>
@@ -463,138 +463,138 @@ Data Grand 
           {{ csrf_field() }}
         </form>
         @elseif($action == 'detail')
-        <div class="mb-3 row">
-          <label for="id" class="col-sm-2 control-label">Id</label>
+        <!-- <div class="mb-3 row">
+          <label for="id" class="col-sm-2 control-label"><strong>Id</strong></label>
           <div class="col-sm-10">
             {{ $row->id }}
           </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="month_id" class="col-sm-2 control-label">Month_id</label>
+        </div> -->
+        <!-- <div class="mb-3 row">
+          <label for="month_id" class="col-sm-2 control-label"><strong>Month_id</strong></label>
           <div class="col-sm-10">
             {{ $row->month_id }}
           </div>
-        </div>
+        </div> -->
         <div class="mb-3 row">
-          <label for="nama" class="col-sm-2 control-label">Nama</label>
+          <label for="nama" class="col-sm-2 control-label"><strong>Nama</strong></label>
           <div class="col-sm-10">
             {{ $row->nama }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="nip" class="col-sm-2 control-label">Nip</label>
+          <label for="nip" class="col-sm-2 control-label"><strong>Nip</strong></label>
           <div class="col-sm-10">
             {{ $row->nip }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="npwp" class="col-sm-2 control-label">Npwp</label>
+          <label for="npwp" class="col-sm-2 control-label"><strong>Npwp</strong></label>
           <div class="col-sm-10">
             {{ $row->npwp }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="panggol" class="col-sm-2 control-label">Panggol</label>
+          <label for="panggol" class="col-sm-2 control-label"><strong>Panggol</strong></label>
           <div class="col-sm-10">
             {{ $row->panggol }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="jabatan" class="col-sm-2 control-label">Jabatan</label>
+          <label for="jabatan" class="col-sm-2 control-label"><strong>Jabatan</strong></label>
           <div class="col-sm-10">
             {{ $row->jabatan }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="grad" class="col-sm-2 control-label">Grad</label>
+          <label for="grad" class="col-sm-2 control-label"><strong>Grad</strong></label>
           <div class="col-sm-10">
             {{ $row->grad }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="maxmedmin" class="col-sm-2 control-label">Maxmedmin</label>
+          <label for="maxmedmin" class="col-sm-2 control-label"><strong>Maxmedmin</strong></label>
           <div class="col-sm-10">
             {{ $row->maxmedmin }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="tunjangan" class="col-sm-2 control-label">Tunjangan</label>
+          <label for="tunjangan" class="col-sm-2 control-label"><strong>Tunjangan</strong></label>
           <div class="col-sm-10">
             {{ $row->tunjangan }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="potabs" class="col-sm-2 control-label">Potabs</label>
+          <label for="potabs" class="col-sm-2 control-label"><strong>Potabs</strong></label>
           <div class="col-sm-10">
             {{ $row->potabs }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="potkim" class="col-sm-2 control-label">Potkim</label>
+          <label for="potkim" class="col-sm-2 control-label"><strong>Potkim</strong></label>
           <div class="col-sm-10">
             {{ $row->potkim }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="jumlahpot" class="col-sm-2 control-label">Jumlahpot</label>
+          <label for="jumlahpot" class="col-sm-2 control-label"><strong>Jumlahpot</strong></label>
           <div class="col-sm-10">
             {{ $row->jumlahpot }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="jumtunjsetpot" class="col-sm-2 control-label">Jumtunjsetpot</label>
+          <label for="jumtunjsetpot" class="col-sm-2 control-label"><strong>Jumtunjsetpot</strong></label>
           <div class="col-sm-10">
             {{ $row->jumtunjsetpot }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="tunjpph" class="col-sm-2 control-label">Tunjpph</label>
+          <label for="tunjpph" class="col-sm-2 control-label"><strong>Tunjpph</strong></label>
           <div class="col-sm-10">
             {{ $row->tunjpph }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="bruto" class="col-sm-2 control-label">Bruto</label>
+          <label for="bruto" class="col-sm-2 control-label"><strong>Bruto</strong></label>
           <div class="col-sm-10">
             {{ $row->bruto }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="potpph" class="col-sm-2 control-label">Potpph</label>
+          <label for="potpph" class="col-sm-2 control-label"><strong>Potpph</strong></label>
           <div class="col-sm-10">
             {{ $row->potpph }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="netto" class="col-sm-2 control-label">Netto</label>
+          <label for="netto" class="col-sm-2 control-label"><strong>Netto</strong></label>
           <div class="col-sm-10">
             {{ $row->netto }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="status" class="col-sm-2 control-label">Status</label>
+          <label for="status" class="col-sm-2 control-label"><strong>Status</strong></label>
           <div class="col-sm-10">
             {{ $row->status }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="alasan" class="col-sm-2 control-label">Alasan</label>
+          <label for="alasan" class="col-sm-2 control-label"><strong>Alasan</strong></label>
           <div class="col-sm-10">
             {{ $row->alasan }}
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="created_at" class="col-sm-2 control-label">Created_at</label>
+        <!-- <div class="mb-3 row">
+          <label for="created_at" class="col-sm-2 control-label"><strong>Created_at</strong></label>
           <div class="col-sm-10">
             {{ $row->created_at }}
           </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="updated_at" class="col-sm-2 control-label">Updated_at</label>
+        </div> -->
+        <!-- <div class="mb-3 row">
+          <label for="updated_at" class="col-sm-2 control-label"><strong>Updated_at</strong></label>
           <div class="col-sm-10">
             {{ $row->updated_at }}
           </div>
-        </div>
+        </div> -->
         <div class="mb-3 row">
           <div class="offset-sm-2 col-sm-10">
             <button type="button" class="btn btn-secondary" onclick="button_cancel()">Back</button>

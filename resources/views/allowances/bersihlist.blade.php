@@ -19,15 +19,15 @@ Slip Gaji Dibayarkan
             <tr>
               <th width="40">No</th>
               <th>Bulan</th>
-              <th>Bersih</th>
-              <th></th>
+              <th>Gaji</th>
+              <th width="120"></th>
             </tr>
           </thead>
           <tbody>
             @php ($no = 1)
             @foreach ($rows as $row)
             <tr>
-              <td>{{ $no++ }}.</td>
+              <td class="text-center">{{ $no++ }}.</td>
               <td>{{ $row->months->month }} {{ $row->months->year }}</td>
               <td>{{toCurrency($row['bersih']) }}</td>
               <td>

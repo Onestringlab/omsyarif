@@ -26,7 +26,9 @@
 </head>
 
 <body>
-  <strong>SLIP GAJI BERSIH</strong> -
+  <h3>
+    <center>SLIP GAJI BERSIH</center>
+  </h3>
   <strong>PENGADILAN TINGGI PONTIANAK</strong></br>
   <table style="width: 100%;">
     <tr>

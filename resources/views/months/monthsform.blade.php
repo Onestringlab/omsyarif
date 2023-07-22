@@ -23,13 +23,13 @@ Data Months 
       @if($action == 'insert')
       <form class="form-horizontal" action="{{ asset('/') }}months" method="post">
         <!-- <div class="mb-3 row">
-          <label for="id" class="col-sm-2 col-form-label">Id</label>
+          <label for="id" class="col-sm-2 col-form-label"><strong>Id</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="id" value="">
           </div>
         </div> -->
         <div class="mb-3 row">
-          <label for="month" class="col-sm-2 col-form-label">Bulan</label>
+          <label for="month" class="col-sm-2 col-form-label"><strong>Bulan</strong></label>
           <div class="col-sm-10">
             @error('month')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -51,7 +51,7 @@ Data Months 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="year" class="col-sm-2 col-form-label">Tahun</label>
+          <label for="year" class="col-sm-2 col-form-label"><strong>Tahun</strong></label>
           <div class="col-sm-10">
             @error('year')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -60,13 +60,13 @@ Data Months 
           </div>
         </div>
         <!-- <div class="mb-3 row">
-          <label for="created_at" class="col-sm-2 col-form-label">Created_at</label>
+          <label for="created_at" class="col-sm-2 col-form-label"><strong>Created_at</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="created_at" value="">
           </div>
         </div> -->
         <!-- <div class="mb-3 row">
-          <label for="updated_at" class="col-sm-2 col-form-label">Updated_at</label>
+          <label for="updated_at" class="col-sm-2 col-form-label"><strong>Updated_at</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="updated_at" value="">
           </div>
@@ -83,13 +83,13 @@ Data Months 
       @elseif($action == 'update')
       <form class="form-horizontal" action="{{ asset('/') }}months/{{ $row->id }}" method="post">
         <!-- <div class="mb-3 row">
-          <label for="id" class="col-sm-2 col-form-label">Id</label>
+          <label for="id" class="col-sm-2 col-form-label"><strong>Id</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="id" value="{{ $row->id }}">
           </div>
         </div> -->
         <div class="mb-3 row">
-          <label for="month" class="col-sm-2 col-form-label">Bulan</label>
+          <label for="month" class="col-sm-2 col-form-label"><strong>Bulan</strong></label>
           <div class="col-sm-10">
             @error('month')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -111,19 +111,19 @@ Data Months 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="year" class="col-sm-2 col-form-label">Tahun</label>
+          <label for="year" class="col-sm-2 col-form-label"><strong>Tahun</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="number" name="year" value="{{ $row->year }}">
           </div>
         </div>
         <!-- <div class="mb-3 row">
-          <label for="created_at" class="col-sm-2 col-form-label">Created_at</label>
+          <label for="created_at" class="col-sm-2 col-form-label"><strong>Created_at</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="created_at" value="{{ $row->created_at }}">
           </div>
         </div> -->
         <!-- <div class="mb-3 row">
-          <label for="updated_at" class="col-sm-2 col-form-label">Updated_at</label>
+          <label for="updated_at" class="col-sm-2 col-form-label"><strong>Updated_at</strong></label>
           <div class="col-sm-10">
             <input class="form-control" type="text" name="updated_at" value="{{ $row->updated_at }}">
           </div>
@@ -150,25 +150,25 @@ Data Months 
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="month" class="col-sm-2 control-label">Bulan</label>
+          <label for="month" class="col-sm-2 control-label"><strong>Bulan</strong></label>
           <div class="col-sm-10">
             {{ $row->month }}
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="year" class="col-sm-2 control-label">Tahun</label>
+          <label for="year" class="col-sm-2 control-label"><strong>Tahun</strong></label>
           <div class="col-sm-10">
             {{ $row->year }}
           </div>
         </div>
         <!-- <div class="mb-3 row">
-          <label for="created_at" class="col-sm-2 control-label">Created_at</label>
+          <label for="created_at" class="col-sm-2 control-label"><strong>Created_at</strong></label>
           <div class="col-sm-10">
             {{ $row->created_at }}
           </div>
         </div> -->
         <!-- <div class="mb-3 row">
-          <label for="updated_at" class="col-sm-2 control-label">Updated_at</label>
+          <label for="updated_at" class="col-sm-2 control-label"><strong>Updated_at</strong></label>
           <div class="col-sm-10">
             {{ $row->updated_at }}
           </div>
@@ -186,31 +186,31 @@ Data Months 
       </form>
       @elseif($action == 'detail')
       <!-- <div class="mb-3 row">
-        <label for="id" class="col-sm-2 control-label">Id</label>
+        <label for="id" class="col-sm-2 control-label"><strong>Id</strong></label>
         <div class="col-sm-10">
           {{ $row->id }}
         </div>
       </div> -->
       <div class="mb-3 row">
-        <label for="month" class="col-sm-2 control-label">Bulan</label>
+        <label for="month" class="col-sm-2 control-label"><strong>Bulan</strong></label>
         <div class="col-sm-10">
           {{ $row->month }}
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="year" class="col-sm-2 control-label">Tahun</label>
+        <label for="year" class="col-sm-2 control-label"><strong>Tahun</strong></label>
         <div class="col-sm-10">
           {{ $row->year }}
         </div>
       </div>
       <!-- <div class="mb-3 row">
-        <label for="created_at" class="col-sm-2 control-label">Created_at</label>
+        <label for="created_at" class="col-sm-2 control-label"><strong>Created_at</strong></label>
         <div class="col-sm-10">
           {{ $row->created_at }}
         </div>
       </div> -->
       <!-- <div class="mb-3 row">
-        <label for="updated_at" class="col-sm-2 control-label">Updated_at</label>
+        <label for="updated_at" class="col-sm-2 control-label"><strong>Updated_at</strong></label>
         <div class="col-sm-10">
           {{ $row->updated_at }}
         </div>

@@ -137,7 +137,7 @@ class AllowancesController extends Controller
 
   public function data($month_id)
   {
-    $rows = Allowances::where('month_id', $month_id)->orderBy('nmpeg', 'DESC')->get();
+    $rows = Allowances::where('month_id', $month_id)->orderBy('nmpeg', 'ASC')->get();
     $month = Months::where('id', $month_id)->first();
     return view('allowances/allowanceslist', ['rows' => $rows, 'month' => $month]);
   }
@@ -146,7 +146,7 @@ class AllowancesController extends Controller
   {
 
     $nip = Auth::user()->nip;
-    $rows = Allowances::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
+    $rows = Allowances::where("nip", $nip)->orderBy('month_id', 'DESC')->get();
     return view('allowances/bersihlist', ['rows' => $rows]);
   }
 

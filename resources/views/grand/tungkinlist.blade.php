@@ -18,12 +18,12 @@ Tunjangan Kinerja
           <thead class="thead-dark">
             <tr class="align-middle text-center table-primary">
               <th width="40">No</th>
-              <th width="120">Bulan</th>
-              <th width="150">Tunjangan</th>
-              <th width="150">Tunjangan Setelah Potongan</th>
-              <th width="150">Netto</th>
-              <th width="120">Status</th>
-              <th>Alasan</th>
+              <th>Bulan</th>
+              <!-- <th width="150">Tunjangan</th> -->
+              <!-- <th width="150">Tunjangan Setelah Potongan</th> -->
+              <th width="120">Netto</th>
+              <th>Status</th>
+              <!-- <th>Alasan</th> -->
               <th width="120"></th>
             </tr>
           </thead>
@@ -31,13 +31,13 @@ Tunjangan Kinerja
             @php ($no = 1)
             @foreach ($rows as $row)
             <tr>
-              <td>{{ $no++ }}.</td>
+              <td class="text-center">{{ $no++ }}.</td>
               <td class="text-center">{{ $row->months->month }} {{ $row->months->year }}</td>
-              <td class="text-end">{{ toCurrency($row['tunjangan']) }}</td>
-              <td class="text-end">{{ toCurrency($row['jumtunjsetpot']) }}</td>
+              <!-- <td class="text-end">{{ toCurrency($row['tunjangan']) }}</td> -->
+              <!-- <td class="text-end">{{ toCurrency($row['jumtunjsetpot']) }}</td> -->
               <td class="text-end">{{ toCurrency($row['netto']) }}</td>
               <td class="text-center">{{ $row['status'] }}</td>
-              <td>{{ $row['alasan'] }}</td>
+              <!-- <td>{{ $row['alasan'] }}</td> -->
               <td>
                 <a class="btn text-light btn-info" href="{{asset('/')}}tungkin/{{ $row->id }}">
                   <i class="fa-solid fa-calendar-check"></i>

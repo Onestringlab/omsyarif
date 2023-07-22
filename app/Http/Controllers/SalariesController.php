@@ -122,7 +122,7 @@ class SalariesController extends Controller
 
   public function data($month_id)
   {
-    $rows = Salaries::where('month_id', $month_id)->orderBy('name', 'DESC')->get();
+    $rows = Salaries::where('month_id', $month_id)->orderBy('name', 'ASC')->get();
     $month = Months::where('id', $month_id)->first();
     return view('salaries/salarieslist', ['rows' => $rows, 'month' => $month]);
   }
@@ -130,7 +130,7 @@ class SalariesController extends Controller
   public function dibayarkanlist()
   {
     $nip = Auth::user()->nip;
-    $rows = Salaries::where('nip', $nip)->orderBy('created_at', 'DESC')->get();
+    $rows = Salaries::where('nip', $nip)->orderBy('month_id', 'DESC')->get();
     return view('salaries/dibayarkanlist', ['rows' => $rows]);
   }
 
