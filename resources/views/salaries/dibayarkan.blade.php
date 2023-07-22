@@ -15,7 +15,6 @@ Slip Gaji Dibayarkan
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{{ asset('/dibayarkanlist') }}">Slip Gaji Dibayarkan</a></li>
       <li class="breadcrumb-item active" aria-current="page">
-      <li class="breadcrumb-item active" aria-current="page">
         {{ $row->months->month }} {{ $row->months->year }}
       </li>
       </li>
