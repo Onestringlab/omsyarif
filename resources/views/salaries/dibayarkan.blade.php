@@ -8,12 +8,12 @@ Slip Gaji Dibayarkan
 <div class="container">
   <script>
     function button_cancel() {
-      location.replace("{{ asset('/') }}sliplist");
+      location.replace("{{ asset('/') }}dibayarkanlist");
     }
   </script>
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ asset('/sliplist') }}">Slip Gaji Dibayarkan</a></li>
+      <li class="breadcrumb-item"><a href="{{ asset('/dibayarkanlist') }}">Slip Gaji Dibayarkan</a></li>
       <li class="breadcrumb-item active" aria-current="page">
       <li class="breadcrumb-item active" aria-current="page">
         {{ $row->months->month }} {{ $row->months->year }}

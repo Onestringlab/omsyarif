@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Presensi Pegawai
+Presensi
 @endsection
 
 @section('content')
@@ -41,10 +41,10 @@ Presensi Pegawai
               <td class="text-center">{{ $row['status'] }}</td>
               <td>{{ $row['alasan'] }}</td>
               <td>
-                <a class="btn text-light btn-info" href="{{asset('/')}}absensi/{{ $row->id }}">
+                <a class="btn text-light btn-info" href="{{asset('/')}}presensi/{{ $row->id }}">
                   <i class="fa-solid fa-calendar-check"></i>
                 </a>
-                <a class="btn btn-secondary" href="{{asset('/')}}absensiform/{{ $row->id }}">
+                <a class="btn btn-secondary" href="{{asset('/')}}presensiform/{{ $row->id }}">
                   <i class="far fa-edit"></i>
                 </a>
               </td>

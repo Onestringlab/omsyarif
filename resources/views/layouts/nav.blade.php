@@ -20,9 +20,15 @@
         <li class="nav-item dropdown">
           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Slip Gaji</a>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('tunjanganlist') }}">{{ __('Bersih') }}</a>
-            <a class="dropdown-item" href="{{ route('sliplist') }}">{{ __('Dibayarkan') }}</a>
+            <a class="dropdown-item" href="{{ route('bersihlist') }}">{{ __('Bersih') }}</a>
+            <a class="dropdown-item" href="{{ route('dibayarkanlist') }}">{{ __('Dibayarkan') }}</a>
           </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('presensilist') }}">Presensi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('tungkinlist') }}">Tunjangan Kinerja</a>
         </li>
         @endif
         @if(in_array(Auth::user()->role, ['admin']))
@@ -33,50 +39,50 @@
           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Data</a>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{{ asset('/months') }}">{{ __('Gaji') }}</a>
-          </div>
-        </li> --}}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ asset('/users') }}">Pengguna</a>
-        </li>
-        @endif
-        @endauth
-      </ul>
+    </div>
+    </li> --}}
+    <li class="nav-item">
+      <a class="nav-link" href="{{ asset('/users') }}">Pengguna</a>
+    </li>
+    @endif
+    @endauth
+    </ul>
 
-      <!-- Right Side Of Navbar -->
-      <ul class="navbar-nav ms-auto">
-        <!-- Authentication Links -->
-        @guest
-        @if (Route::has('login'))
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-        </li>
-        @endif
+    <!-- Right Side Of Navbar -->
+    <ul class="navbar-nav ms-auto">
+      <!-- Authentication Links -->
+      @guest
+      @if (Route::has('login'))
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+      </li>
+      @endif
 
-        @if (Route::has('register'))
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-        </li>
-        @endif
-        @else
-        <li class="nav-item dropdown">
-          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->name }}
+      @if (Route::has('register'))
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+      </li>
+      @endif
+      @else
+      <li class="nav-item dropdown">
+        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+          {{ Auth::user()->name }}
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ asset('/password')}}/{{Auth::user()->id}}">{{ __('Ubah Password') }}</a>
+          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
           </a>
 
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ asset('/password')}}/{{Auth::user()->id}}">{{ __('Ubah Password') }}</a>
-            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">
-              {{ __('Logout') }}
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-              @csrf
-            </form>
-          </div>
-        </li>
-        @endguest
-      </ul>
-    </div>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
+        </div>
+      </li>
+      @endguest
+    </ul>
+  </div>
   </div>
 </nav>

@@ -33,22 +33,29 @@ Route::middleware(['auth', 'checkrole:user,admin'])->group(
 		Route::post('/passwordupdate', [UsersController::class, 'passwordupdate']);
 
 		Route::controller(SalariesController::class)->group(function () {
-			Route::get('/sliplist', 'sliplist')->name('sliplist');
-			Route::get('/slip/{id}', 'slip')->name('slip');
-			Route::get('/slippdf/{id}', 'slippdf')->name('slippdf');
+			Route::get('/dibayarkanlist', 'dibayarkanlist')->name('dibayarkanlist');
+			Route::get('/dibayarkan/{id}', 'dibayarkan')->name('dibayarkan');
+			Route::get('/dibayarkanpdf/{id}', 'dibayarkanpdf')->name('dibayarkanpdf');
 		});
 
 		Route::controller(AllowancesController::class)->group(function () {
-			Route::get('/tunjanganlist', 'tunjanganlist')->name('tunjanganlist');
-			Route::get('/tunjangan/{id}', 'tunjangan')->name('tunjangan');
-			Route::get('/tunjanganpdf/{id}', 'tunjanganpdf')->name('tunjanganpdf');
+			Route::get('/bersihlist', 'bersihlist')->name('bersihlist');
+			Route::get('/bersih/{id}', 'bersih')->name('bersih');
+			Route::get('/bersihpdf/{id}', 'bersihpdf')->name('bersihpdf');
 		});
 
 		Route::controller(PresenceController::class)->group(function () {
-			Route::get('/absensilist', 'absensilist')->name('absensilist');
-			Route::get('/absensi/{id}', 'absensi')->name('absensi');
-			Route::get('/absensiform/{id}', 'absensiform')->name('absensiform');
-			Route::post('/absensiedit', 'absensiedit')->name('absensiedit');
+			Route::get('/presensilist', 'presensilist')->name('presensilist');
+			Route::get('/presensi/{id}', 'presensi')->name('presensi');
+			Route::get('/presensiform/{id}', 'presensiform')->name('presensiform');
+			Route::post('/presensiedit', 'presensiedit')->name('presensiedit');
+		});
+
+		Route::controller(GrandController::class)->group(function () {
+			Route::get('/tungkinlist', 'tungkinlist')->name('tungkinlist');
+			Route::get('/tungkin/{id}', 'tungkin')->name('tungkin');
+			Route::get('/tungkinform/{id}', 'tungkinform')->name('tungkinform');
+			Route::post('/tungkinedit', 'tungkinedit')->name('tungkinedit');
 		});
 	}
 );

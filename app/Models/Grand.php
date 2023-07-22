@@ -11,4 +11,9 @@ class Grand extends Model
     public $primaryKey  = 'id';
     protected $table = 'grands';
     protected $guarded = [];
+
+    function months()
+    {
+        return $this->belongsTo('App\Models\Months', 'month_id');
+    }
 }

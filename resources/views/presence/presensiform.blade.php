@@ -8,7 +8,7 @@ Presensi Pegawai
 <div class="container">
   <script>
     function button_cancel() {
-      location.replace("{{ asset('/') }}absensilist");
+      location.replace("{{ asset('/') }}presensilist");
     }
   </script>
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -26,7 +26,7 @@ Presensi Pegawai
       {{ $row->months->month }} {{ $row->months->year }}
     </h5>
     <div class="card-body">
-      <form class="form-horizontal" action="{{ asset('/') }}absensiedit" method="post">
+      <form class="form-horizontal" action="{{ asset('/') }}presensiedit" method="post">
         <div class="mb-3 row">
           <label for="nip" class="col-sm-2 control-label">NIP</label>
           <div class="col-sm-10">

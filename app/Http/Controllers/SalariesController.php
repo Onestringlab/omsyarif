@@ -127,25 +127,25 @@ class SalariesController extends Controller
     return view('salaries/salarieslist', ['rows' => $rows, 'month' => $month]);
   }
 
-  public function sliplist()
+  public function dibayarkanlist()
   {
     $nip = Auth::user()->nip;
     $rows = Salaries::where('nip', $nip)->orderBy('created_at', 'DESC')->get();
-    return view('salaries/sliplist', ['rows' => $rows]);
+    return view('salaries/dibayarkanlist', ['rows' => $rows]);
   }
 
-  public function slip($id)
+  public function dibayarkan($id)
   {
     $row = Salaries::where('id', $id)->where('nip', Auth::user()->nip)->first();
-    return view('salaries/slip', ['row' => $row]);
+    return view('salaries/dibayarkan', ['row' => $row]);
   }
 
-  public function slippdf($id)
+  public function dibayarkanpdf($id)
   {
     $row = Salaries::where('id', $id)->where('nip', Auth::user()->nip)->first();
-    $pdf = PDF::loadview('salaries/slippdf', ['row' => $row])->setPaper('a5');
-    // return $pdf->download('slip_dibayarkan' . generate_uuid() . '.pdf');
-    return $pdf->stream('slip_dibayarkan' . generate_uuid_4());
+    $pdf = PDF::loadview('salaries/dibayarkanpdf', ['row' => $row])->setPaper('a5');
+    // return $pdf->download('dibayarkan_dibayarkan' . generate_uuid() . '.pdf');
+    return $pdf->stream('dibayarkan_dibayarkan' . generate_uuid_4());
   }
 
   public function import(Request $request)

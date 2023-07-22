@@ -142,18 +142,18 @@ class AllowancesController extends Controller
     return view('allowances/allowanceslist', ['rows' => $rows, 'month' => $month]);
   }
 
-  public function tunjanganlist()
+  public function bersihlist()
   {
 
     $nip = Auth::user()->nip;
     $rows = Allowances::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
-    return view('allowances/tunjanganlist', ['rows' => $rows]);
+    return view('allowances/bersihlist', ['rows' => $rows]);
   }
 
-  public function tunjangan($id)
+  public function bersih($id)
   {
     $row = Allowances::where("id", $id)->where('nip', Auth::user()->nip)->first();
-    return view('allowances/tunjangan', ['row' => $row]);
+    return view('allowances/bersih', ['row' => $row]);
   }
 
   public function import(Request $request)
@@ -180,10 +180,10 @@ class AllowancesController extends Controller
     return redirect('/allowances/data/' . $month_id);
   }
 
-  public function tunjanganpdf($id)
+  public function bersihpdf($id)
   {
     $row = Allowances::where('id', $id)->where('nip', Auth::user()->nip)->first();
-    $pdf = PDF::loadview('allowances/tunjanganpdf', ['row' => $row])->setPaper('a5');
+    $pdf = PDF::loadview('allowances/bersihpdf', ['row' => $row])->setPaper('a5');
     // return $pdf->download('slip_bersih_' . generate_uuid() . '.pdf');
     return $pdf->stream('slip_bersih_' . generate_uuid_4());
   }

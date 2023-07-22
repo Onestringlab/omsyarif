@@ -8,13 +8,13 @@ Slip Gaji Dibayarkan
 <div class="container">
   <script>
     function button_cancel() {
-      location.replace("{{ asset('/') }}tunjanganlist");
+      location.replace("{{ asset('/') }}bersihlist");
     }
   </script>
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="{{ asset('/tunjanganlist') }}">Slip Gaji Bersih</a>
+        <a href="{{ asset('/bersihlist') }}">Slip Gaji Bersih</a>
       </li>
       <li class="breadcrumb-item active" aria-current="page">
         {{ $row->months->month }} {{ $row->months->year }}

@@ -192,32 +192,32 @@ class PresenceController extends Controller
 	}
 
 	// user side 
-	public function absensilist()
+	public function presensilist()
 	{
 
 		$nip = Auth::user()->nip;
 		$rows = Presence::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
-		return view('presence/absensilist', ['rows' => $rows]);
+		return view('presence/presensilist', ['rows' => $rows]);
 	}
 
-	public function absensi($id)
+	public function presensi($id)
 	{
 		$row = Presence::where("id", $id)->where('nip', Auth::user()->nip)->first();
-		return view('presence/absensi', ['row' => $row]);
+		return view('presence/presensi', ['row' => $row]);
 	}
 
-	public function absensiform($id)
+	public function presensiform($id)
 	{
 		$row = Presence::where("id", $id)->where('nip', Auth::user()->nip)->first();
-		return view('presence/absensiform', ['row' => $row]);
+		return view('presence/presensiform', ['row' => $row]);
 	}
 
-	public function absensiedit(Request $request)
+	public function presensiedit(Request $request)
 	{
 		$presence = Presence::find($request->id);
 		$presence->status = $request->status;
 		$presence->alasan = $request->alasan;
 		$presence->save();
-		return redirect('/absensilist');
+		return redirect('/presensilist');
 	}
 }

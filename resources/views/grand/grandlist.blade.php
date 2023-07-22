@@ -7,7 +7,7 @@ Data Grand 
 @section('content')
 <div class="container">
   <div class="card">
-    <h5 class="card-header"> Data Tunjangan Kinerja</h5>
+    <h5 class="card-header text-bg-success"> Data Tunjangan Kinerja</h5>
     <div class="card-body">
       <div class="table-responsive">
         <table class="table table-striped table-hover ">
@@ -26,7 +26,7 @@ Data Grand 
               <!-- <th>Potabs</th> -->
               <!-- <th>Potkim</th> -->
               <!-- <th>Jumlahpot</th> -->
-              <!-- <th>Jumtunjsetpot</th> -->
+              <th width="150">Tunjangan Setelah Potongan</th>
               <!-- <th>Tunjpph</th> -->
               <!-- <th>Bruto</th> -->
               <!-- <th>Potpph</th> -->
@@ -62,7 +62,7 @@ Data Grand 
               <!-- <td>{{ $row['potabs'] }}</td> -->
               <!-- <td>{{ $row['potkim'] }}</td> -->
               <!-- <td>{{ $row['jumlahpot'] }}</td> -->
-              <!-- <td>{{ $row['jumtunjsetpot'] }}</td> -->
+              <td>{{ $row['jumtunjsetpot'] }}</td>
               <!-- <td>{{ $row['tunjpph'] }}</td> -->
               <!-- <td>{{ $row['bruto'] }}</td> -->
               <!-- <td>{{ $row['potpph'] }}</td> -->

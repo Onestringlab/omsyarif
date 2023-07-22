@@ -6,7 +6,7 @@ use App\Models\Grand;
 use App\Models\Months;
 use Illuminate\Http\Request;
 use App\Imports\GrandsImport;
-
+use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 
 class GrandController extends Controller
@@ -134,5 +134,35 @@ class GrandController extends Controller
 	{
 		Grand::where('month_id', '=', $month_id)->delete();
 		return redirect('/grand/data/' . $month_id);
+	}
+
+	// user side 
+	public function tungkinlist()
+	{
+
+		$nip = Auth::user()->nip;
+		$rows = Grand::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
+		return view('grand/tungkinlist', ['rows' => $rows]);
+	}
+
+	public function tungkin($id)
+	{
+		$row = Grand::where("id", $id)->where('nip', Auth::user()->nip)->first();
+		return view('grand/tungkin', ['row' => $row]);
+	}
+
+	public function tungkinform($id)
+	{
+		$row = Grand::where("id", $id)->where('nip', Auth::user()->nip)->first();
+		return view('grand/tungkinform', ['row' => $row]);
+	}
+
+	public function tungkinedit(Request $request)
+	{
+		$grand = Grand::find($request->id);
+		$grand->status = $request->status;
+		$grand->alasan = $request->alasan;
+		$grand->save();
+		return redirect('/tungkinlist');
 	}
 }

@@ -8,13 +8,13 @@ Presensi Pegawai
 <div class="container">
   <script>
     function button_cancel() {
-      location.replace("{{ asset('/') }}absensilist");
+      location.replace("{{ asset('/') }}presensilist");
     }
   </script>
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="{{ asset('/absensilist') }}">Presensi</a>
+        <a href="{{ asset('/presensilist') }}">Presensi</a>
       </li>
       <li class="breadcrumb-item active" aria-current="page">
         {{ $row->months->month }} {{ $row->months->year }}

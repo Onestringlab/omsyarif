@@ -20,6 +20,7 @@
 </head>
 
 <body>
+  <strong>SLIP GAJI DIBAYARKAN</strong> -
   <strong>PENGADILAN TINGGI PONTIANAK</strong></br>
   <table style="width: 100%;">
     <tr>
