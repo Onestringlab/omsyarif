@@ -68,7 +68,7 @@ Data Grand 
               <!-- <td>{{ $row['potabs'] }}</td> -->
               <!-- <td>{{ $row['potkim'] }}</td> -->
               <!-- <td>{{ $row['jumlahpot'] }}</td> -->
-              <td class="text-end">{{ $row['jumtunjsetpot'] }}</td>
+              <td class="text-end">{{ toCurrency($row['jumtunjsetpot']) }}</td>
               <!-- <td>{{ $row['tunjpph'] }}</td> -->
               <!-- <td>{{ $row['bruto'] }}</td> -->
               <!-- <td>{{ $row['potpph'] }}</td> -->

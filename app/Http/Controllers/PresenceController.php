@@ -196,7 +196,7 @@ class PresenceController extends Controller
 	{
 
 		$nip = Auth::user()->nip;
-		$rows = Presence::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
+		$rows = Presence::where("nip", $nip)->orderBy('month_id', 'DESC')->get();
 		return view('presence/presensilist', ['rows' => $rows]);
 	}
 

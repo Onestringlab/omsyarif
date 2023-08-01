@@ -139,7 +139,6 @@ class GrandController extends Controller
 	// user side 
 	public function tungkinlist()
 	{
-
 		$nip = Auth::user()->nip;
 		$rows = Grand::where("nip", $nip)->orderBy('created_at', 'DESC')->get();
 		return view('grand/tungkinlist', ['rows' => $rows]);

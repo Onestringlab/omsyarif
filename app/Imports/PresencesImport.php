@@ -69,7 +69,7 @@ class PresencesImport implements ToModel, WithStartRow
 			'cm41' => ($row[33] == '-') ? 0 : $row[33],
 			'cm42' => ($row[34] == '-') ? 0 : $row[34],
 			'cm43' => ($row[35] == '-') ? 0 : $row[35],
-			'cap1' => ($row[37] == '-') ? 0 : $row[36],
+			'cap1' => ($row[36] == '-') ? 0 : $row[36],
 			'cap10' => ($row[37] == '-') ? 0 : $row[37],
 			'cb1' => ($row[38] == '-') ? 0 : $row[38],
 			'cb2' => ($row[39] == '-') ? 0 : $row[39],
