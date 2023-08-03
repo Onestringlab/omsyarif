@@ -375,7 +375,7 @@ Data Grand 
           <div class="mb-3 row">
             <label for="tunjangan" class="col-sm-2 control-label"><strong>Tunjangan</strong></label>
             <div class="col-sm-10">
-              {{ $row->tunjangan }}
+              {{ toCurrency($row->tunjangan) }}
             </div>
           </div>
           <div class="mb-3 row">
@@ -393,37 +393,37 @@ Data Grand 
           <div class="mb-3 row">
             <label for="jumlahpot" class="col-sm-2 control-label"><strong>Jumlahpot</strong></label>
             <div class="col-sm-10">
-              {{ $row->jumlahpot }}
+              {{ toCurrency($row->jumlahpot) }}
             </div>
           </div>
           <div class="mb-3 row">
             <label for="jumtunjsetpot" class="col-sm-2 control-label"><strong>Jumtunjsetpot</strong></label>
             <div class="col-sm-10">
-              {{ $row->jumtunjsetpot }}
+              {{ toCurrency($row->jumtunjsetpot) }}
             </div>
           </div>
           <div class="mb-3 row">
             <label for="tunjpph" class="col-sm-2 control-label"><strong>Tunjpph</strong></label>
             <div class="col-sm-10">
-              {{ $row->tunjpph }}
+              {{ toCurrency($row->tunjpph) }}
             </div>
           </div>
           <div class="mb-3 row">
             <label for="bruto" class="col-sm-2 control-label"><strong>Bruto</strong></label>
             <div class="col-sm-10">
-              {{ $row->bruto }}
+              {{ toCurrency($row->bruto) }}
             </div>
           </div>
           <div class="mb-3 row">
             <label for="potpph" class="col-sm-2 control-label"><strong>Potpph</strong></label>
             <div class="col-sm-10">
-              {{ $row->potpph }}
+              {{ toCurrency($row->potpph) }}
             </div>
           </div>
           <div class="mb-3 row">
             <label for="netto" class="col-sm-2 control-label"><strong>Netto</strong></label>
             <div class="col-sm-10">
-              {{ $row->netto }}
+              {{ toCurrency($row->netto) }}
             </div>
           </div>
           <div class="mb-3 row">
@@ -520,7 +520,7 @@ Data Grand 
         <div class="mb-3 row">
           <label for="tunjangan" class="col-sm-2 control-label"><strong>Tunjangan</strong></label>
           <div class="col-sm-10">
-            {{ $row->tunjangan }}
+            {{ toCurrency($row->tunjangan) }}
           </div>
         </div>
         <div class="mb-3 row">
@@ -538,37 +538,37 @@ Data Grand 
         <div class="mb-3 row">
           <label for="jumlahpot" class="col-sm-2 control-label"><strong>Jumlahpot</strong></label>
           <div class="col-sm-10">
-            {{ $row->jumlahpot }}
+            {{ toCurrency($row->jumlahpot) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="jumtunjsetpot" class="col-sm-2 control-label"><strong>Jumtunjsetpot</strong></label>
           <div class="col-sm-10">
-            {{ $row->jumtunjsetpot }}
+            {{ toCurrency($row->jumtunjsetpot) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="tunjpph" class="col-sm-2 control-label"><strong>Tunjpph</strong></label>
           <div class="col-sm-10">
-            {{ $row->tunjpph }}
+            {{ toCurrency($row->tunjpph) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="bruto" class="col-sm-2 control-label"><strong>Bruto</strong></label>
           <div class="col-sm-10">
-            {{ $row->bruto }}
+            {{ toCurrency($row->bruto) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="potpph" class="col-sm-2 control-label"><strong>Potpph</strong></label>
           <div class="col-sm-10">
-            {{ $row->potpph }}
+            {{ toCurrency($row->potpph) }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="netto" class="col-sm-2 control-label"><strong>Netto</strong></label>
           <div class="col-sm-10">
-            {{ $row->netto }}
+            {{ toCurrency($row->netto) }}
           </div>
         </div>
         <div class="mb-3 row">

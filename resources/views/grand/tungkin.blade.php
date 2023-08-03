@@ -78,13 +78,13 @@ Tunjangan Kinerja
         <div class="mb-3 row">
           <label for="potabs" class="col-sm-2 control-label"><strong>Pot. Abs.</strong></label>
           <div class="col-sm-10">
-            {{ toCurrency($row->potabs) }}
+            {{ $row->potabs }}
           </div>
         </div>
         <div class="mb-3 row">
           <label for="potkim" class="col-sm-2 control-label"><strong>Pot. Kin.</strong></label>
           <div class="col-sm-10">
-            {{ toCurrency($row->potkim) }}
+            {{ $row->potkim }}
           </div>
         </div>
         <div class="mb-3 row">
