@@ -187,6 +187,12 @@ Data Presensi
 					</div>
 				</div>
 				<div class="mb-3 row">
+					<label for="bmt" class="col-sm-2 col-form-label"><strong>Bmt</strong></label>
+					<div class="col-sm-10">
+						<input class="form-control" type="text" name="bmt" value="">
+					</div>
+				</div>
+				<div class="mb-3 row">
 					<label for="ib" class="col-sm-2 col-form-label"><strong>Ib</strong></label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="ib" value="">
@@ -499,6 +505,12 @@ Data Presensi
 					<label for="ld" class="col-sm-2 col-form-label"><strong>Ld</strong></label>
 					<div class="col-sm-10">
 						<input class="form-control" type="text" name="ld" value="{{ $row->ld }}">
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<label for="bmt" class="col-sm-2 col-form-label"><strong>Bmt</strong></label>
+					<div class="col-sm-10">
+						<input class="form-control" type="text" name="bmt" value="{{ $row->bmt }}">
 					</div>
 				</div>
 				<div class="mb-3 row">
@@ -819,6 +831,12 @@ Data Presensi
 					</div>
 				</div>
 				<div class="mb-3 row">
+					<label for="ld" class="col-sm-2 control-label"><strong>Bmt</strong></label>
+					<div class="col-sm-10">
+						{{ $row->bmt }}
+					</div>
+				</div>
+				<div class="mb-3 row">
 					<label for="ib" class="col-sm-2 control-label"><strong>Ib</strong></label>
 					<div class="col-sm-10">
 						{{ $row->ib }}
@@ -1129,6 +1147,12 @@ Data Presensi
 				<label for="ld" class="col-sm-2 control-label"><strong>Ld</strong></label>
 				<div class="col-sm-10">
 					{{ $row->ld }}
+				</div>
+			</div>
+			<div class="mb-3 row">
+				<label for="ld" class="col-sm-2 control-label"><strong>Bmt</strong></label>
+				<div class="col-sm-10">
+					{{ $row->bmt }}
 				</div>
 			</div>
 			<div class="mb-3 row">

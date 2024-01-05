@@ -53,6 +53,7 @@ class PresenceController extends Controller
 		$presence->ctl = $request->ctl;
 		$presence->tb = $request->tb;
 		$presence->ld = $request->ld;
+		$presence->bmt = $request->bmt;
 		$presence->ib = $request->ib;
 		$presence->tmk = $request->tmk;
 		$presence->cs1 = $request->cs1;
@@ -122,6 +123,7 @@ class PresenceController extends Controller
 		$presence->ctl = $request->ctl;
 		$presence->tb = $request->tb;
 		$presence->ld = $request->ld;
+		$presence->bmt = $request->bmt;
 		$presence->ib = $request->ib;
 		$presence->tmk = $request->tmk;
 		$presence->cs1 = $request->cs1;

@@ -38,13 +38,13 @@
     <tr>
       <td>Nama</td>
       <td>:</td>
-      <td>{{ $row->name }}</td>
+      <td>{{Auth::user()->name}}</td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td>Nomor Rekening</td>
       <td>:</td>
       <td>{{ $row->rekening}}</td>
-    </tr>
+    </tr> -->
     <tr>
       <td colspan="3">
         <hr>
