@@ -38,7 +38,7 @@ Slip Gaji Dibayarkan
       <div class="mb-3 row">
         <label for="name" class="col-sm-3 control-label"><strong>Nama</strong></label>
         <div class="col-sm-9">
-          {{ $row->name }}
+          {{Auth::user()->name}}
         </div>
       </div>
       <div class="mb-3 row">
@@ -47,18 +47,18 @@ Slip Gaji Dibayarkan
           {{ $row->gol }}
         </div>
       </div>
-      <div class="mb-3 row">
+      <!-- <div class="mb-3 row">
         <label for="rekening" class="col-sm-3 control-label"><strong>No. Rekening</strong></label>
         <div class="col-sm-9">
           {{ $row->rekening }}
         </div>
-      </div>
-      <div class="mb-3 row">
+      </div> -->
+      <!-- <div class="mb-3 row">
         <label for="bank" class="col-sm-3 control-label"><strong>Bank</strong></label>
         <div class="col-sm-9">
           {{ $row->bank }}
         </div>
-      </div>
+      </div> -->
       <div class="mb-3 row">
         <label for="bersih" class="col-sm-3 control-label"><strong>Bersih</strong></label>
         <div class="col-sm-9">

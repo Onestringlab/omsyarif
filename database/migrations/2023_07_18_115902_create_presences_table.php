@@ -39,6 +39,7 @@ return new class extends Migration
 			$table->integer('ctl')->nullable();
 			$table->integer('tb')->nullable();
 			$table->integer('ld')->nullable();
+			$table->integer('bmt')->nullable();
 			$table->integer('ib')->nullable();
 			$table->integer('tmk')->nullable();
 			$table->integer('cs1')->nullable();

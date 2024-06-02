@@ -47,27 +47,27 @@ Slip Gaji Dibayarkan
       <div class="mb-3 row">
         <label for="nmpeg" class="col-sm-3 control-label"><strong>Nama</strong></label>
         <div class="col-sm-9">
-          {{ $row->nmpeg }}
+          {{Auth::user()->name}}
         </div>
       </div>
-      <div class="mb-3 row">
+      <!-- <div class="mb-3 row">
         <label for="npwp" class="col-sm-3 control-label"><strong>NPWP</strong></label>
         <div class="col-sm-9">
           {{ $row->npwp }}
         </div>
-      </div>
-      <div class="mb-3 row">
+      </div> -->
+      <!-- <div class="mb-3 row">
         <label for="rekening" class="col-sm-3 control-label"><strong>Rekening</strong></label>
         <div class="col-sm-9">
           {{ $row->rekening }}
         </div>
-      </div>
-      <div class="mb-3 row">
+      </div> -->
+      <!-- <div class="mb-3 row">
         <label for="nmbankspan" class="col-sm-3 control-label"><strong>Nama Bank</strong></label>
         <div class="col-sm-9">
           {{ $row->nmbankspan }}
         </div>
-      </div>
+      </div> -->
       <div class="mb-3 row">
         <label for="gjpokok" class="col-sm-3 control-label"><strong>Gaji Pokok</strong></label>
         <div class="col-sm-9">
